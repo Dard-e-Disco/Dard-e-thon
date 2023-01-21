@@ -36,7 +36,7 @@ function Modal(props) {
               </span>
             </h4>
           </div>
-          <div className="forgot-password-question">
+          {/* <div className="forgot-password-question">
             <h4
               id="fp"
               onClick={() => {
@@ -45,7 +45,7 @@ function Modal(props) {
             >
              FORGOT PASSWORD ?
             </h4>
-          </div>
+          </div> */}
         </div>
       );
     } else if (active === "signup") {
@@ -75,13 +75,13 @@ function Modal(props) {
     } else if (active === "forgot1") {
       return (
         <div className="forgot1m">
-          <Forgot
+          {/* <Forgot
             showToast={props.showToast}
             setActive={setActive}
             setEmail={setEmail}
             setQuestion={setQuestion}
             setOpenModal={props.setOpenModal}
-          />
+          /> */}
         </div>
       );
     } else if (active === "forgot2") {

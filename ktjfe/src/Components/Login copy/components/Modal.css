@@ -121,8 +121,9 @@
 .forgot-password-question
 {
   background-color: rgba(0, 0, 0, 0.9);
-  width: 100%;
+  width: 90%;
   margin: 0px auto;
+  transform: translateY(-10px);
 }
 #fp{
   margin: 0px;
@@ -169,7 +170,8 @@
   background-color: rgba(0, 0, 0, 0.9);
 
   padding: 0.5px 0px;
-  margin: 16px 0;
+  margin: 0px 16px;
+  transform: translateY(-16px);
 }
 .form-question-container h4
 {
@@ -181,7 +183,8 @@
   background-color: rgba(0, 0, 0, 0.9);
 
   padding: 0.5px 0px;
-  margin: 16px 0;
+  margin: 0px 16px;
+  transform: translateY(-8px);
 }
 .form-question-container-2 h4
 {
