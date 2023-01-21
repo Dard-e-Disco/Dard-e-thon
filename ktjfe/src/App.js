@@ -1,12 +1,5 @@
-import React, { useState,useContext } from 'react';
-import {
-  Router,
-  Routes,
-  Route,
-  Link,
-  useNavigate,
-  useEffect,
-} from "react-router-dom";
+import React, { useState } from 'react';
+
 
 import "./App.css";
 import UserContext from "./Context/UserContext";
@@ -53,29 +46,9 @@ function App() {
     setLoginSignup(!loginSignup);
   };
 
-  // const log = () => {
-  //   // alert(1);
-  //   toggleLoginModal();
-  // };
-  const [ModalLandingPage, setModalLandingPage] = useState(false);
-  const [preview, setPreview] = useState(false);
-  const usercontext = useContext(UserContext);
-  const {
-    setuser,
-    setUserToken,
-    userToken,
-    Isloggedin,
-    group,
-    solo,
-    setIsloggedin,
-    setGroup,
-    setSolo,
-  } = usercontext;
 
-  // const log = () => {
-  //   // alert(1);
-  //   toggleLoginModal();
-  // };
+
+
   return (
     <div className="App">
       {/* <Routes>
