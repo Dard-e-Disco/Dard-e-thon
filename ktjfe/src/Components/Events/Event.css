@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
+
 *,
 *:before,
 *:after {
@@ -32,11 +33,13 @@ a {
 .col {
   padding: 1rem;
 }
+
 @media (min-width: 650px) {
   .col {
     width: 50%;
     float: left;
   }
+
   .col:nth-of-type(2n + 1) {
     clear: left;
   }
@@ -47,9 +50,11 @@ a {
   text-align: center;
   color: #eeeeee;
 }
+
 .card .content {
   padding: 4rem 1rem;
 }
+
 .card .title {
   font-size: 1.25rem;
   background-color: gray;
@@ -57,152 +62,47 @@ a {
   padding: 0.5rem;
 }
 
-.card-1 .content {
-  background-color: #b6919b !important;
-  border-radius: 5px;
-}
-.card-1:before, .card-1:after {
-  border-radius: 5px;
-}
-.card-1:before {
-  background-color: #966472 !important;
-}
-.card-1 .title, .card-1:after {
-  background-color: #68454f !important;
-}
 
-.card-2 .content {
-  background-color: #c8a0ab !important;
-  border-radius: 5px;
-}
-.card-2:before, .card-2:after {
-  border-radius: 5px;
-}
-.card-2:before {
-  background-color: #ac6f80 !important;
-}
-.card-2 .title, .card-2:after {
-  background-color: #834c5b !important;
-}
+
+
 
 .card-3 .content {
   background-color: #ab919a !important;
   border-radius: 5px;
 }
-.card-3:before, .card-3:after {
+
+.card-3:before,
+.card-3:after {
   border-radius: 5px;
 }
+
 .card-3:before {
   background-color: #886873 !important;
 }
-.card-3 .title, .card-3:after {
+
+.card-3 .title,
+.card-3:after {
   background-color: #5d474e !important;
 }
 
-.card-4 .content {
-  background-color: #a1959e !important;
-  border-radius: 5px;
-}
-.card-4:before, .card-4:after {
-  border-radius: 5px;
-}
-.card-4:before {
-  background-color: #7c6e78 !important;
-}
-.card-4 .title, .card-4:after {
-  background-color: #534a51 !important;
-}
 
-.card-5 .content {
-  background-color: #a6dddd !important;
-  border-radius: 5px;
-}
-.card-5:before, .card-5:after {
-  border-radius: 5px;
-}
-.card-5:before {
-  background-color: #6fc8c8 !important;
-}
-.card-5 .title, .card-5:after {
-  background-color: #41aaaa !important;
-}
 
-.card-6 .content {
-  background-color: #d9a9c6 !important;
-  border-radius: 5px;
-}
-.card-6:before, .card-6:after {
-  border-radius: 5px;
-}
-.card-6:before {
-  background-color: #c274a3 !important;
-}
-.card-6 .title, .card-6:after {
-  background-color: #a2477e !important;
-}
 
-.card-7 .content {
-  background-color: #d7ae9f !important;
-  border-radius: 5px;
-}
-.card-7:before, .card-7:after {
-  border-radius: 5px;
-}
-.card-7:before {
-  background-color: #c18169 !important;
-}
-.card-7 .title, .card-7:after {
-  background-color: #9d5a41 !important;
-}
 
-.card-8 .content {
-  background-color: #d8abd6 !important;
-  border-radius: 5px;
-}
-.card-8:before, .card-8:after {
-  border-radius: 5px;
-}
-.card-8:before {
-  background-color: #c077bc !important;
-}
-.card-8 .title, .card-8:after {
-  background-color: #a04a9c !important;
-}
 
-.card-9 .content {
-  background-color: #bfbcdf !important;
-  border-radius: 5px;
-}
-.card-9:before, .card-9:after {
-  border-radius: 5px;
-}
-.card-9:before {
-  background-color: #8e88c6 !important;
-}
-.card-9 .title, .card-9:after {
-  background-color: #5d54ad !important;
-}
 
-.card-10 .content {
-  background-color: #cea5a5 !important;
-  border-radius: 5px;
-}
-.card-10:before, .card-10:after {
-  border-radius: 5px;
-}
-.card-10:before {
-  background-color: #b37373 !important;
-}
-.card-10 .title, .card-10:after {
-  background-color: #8d4d4d !important;
-}
+
+
+
 
 [class*=stacked--] {
   position: relative;
   transition: transform 0.3s ease-in-out;
   will-change: transform;
 }
-[class*=stacked--]:before, [class*=stacked--]:after {
+
+[class*=stacked--]:before,
+[class*=stacked--]:after {
   content: "";
   position: absolute;
   top: 0;
@@ -213,61 +113,79 @@ a {
   transition: transform 0.3s ease-in-out;
   will-change: transform;
 }
+
 [class*=stacked--]:before {
   z-index: -1;
 }
+
 [class*=stacked--]:after {
   z-index: -2;
 }
 
-.stacked--left:before, .stacked--left:after {
+.stacked--left:before,
+.stacked--left:after {
   transform-origin: right center;
 }
+
 .stacked--left:hover {
   transform: translate(-5px, 0);
 }
+
 .stacked--left:hover:before {
   transform: translate(5px, 0) scale(0.95);
 }
+
 .stacked--left:hover:after {
   transform: translate(10px, 0) scale(0.9);
 }
 
-.stacked--right:before, .stacked--right:after {
+.stacked--right:before,
+.stacked--right:after {
   transform-origin: left center;
 }
+
 .stacked--right:hover {
   transform: translate(5px, 0);
 }
+
 .stacked--right:hover:before {
   transform: translate(-5px, 0) scale(0.95);
 }
+
 .stacked--right:hover:after {
   transform: translate(-10px, 0) scale(0.9);
 }
 
-.stacked--up:before, .stacked--up:after {
+.stacked--up:before,
+.stacked--up:after {
   transform-origin: center bottom;
 }
+
 .stacked--up:hover {
   transform: translate(0, -5px);
 }
+
 .stacked--up:hover:before {
   transform: translate(0, 5px) scale(0.95);
 }
+
 .stacked--up:hover:after {
   transform: translate(0, 10px) scale(0.9);
 }
 
-.stacked--down:before, .stacked--down:after {
+.stacked--down:before,
+.stacked--down:after {
   transform-origin: center top;
 }
+
 .stacked--down:hover {
   transform: translate(0, 5px);
 }
+
 .stacked--down:hover:before {
   transform: translate(0, -5px) scale(0.95);
 }
+
 .stacked--down:hover:after {
   transform: translate(0, -10px) scale(0.9);
 }
@@ -275,9 +193,11 @@ a {
 .stacked--up-left:hover {
   transform: translate(-5px, -5px);
 }
+
 .stacked--up-left:hover:before {
   transform: translate(5px, 5px);
 }
+
 .stacked--up-left:hover:after {
   transform: translate(10px, 10px);
 }
@@ -285,9 +205,11 @@ a {
 .stacked--up-right:hover {
   transform: translate(5px, -5px);
 }
+
 .stacked--up-right:hover:before {
   transform: translate(-5px, 5px);
 }
+
 .stacked--up-right:hover:after {
   transform: translate(-10px, 10px);
 }
@@ -295,9 +217,11 @@ a {
 .stacked--down-left:hover {
   transform: translate(-5px, 5px);
 }
+
 .stacked--down-left:hover:before {
   transform: translate(5px, -5px);
 }
+
 .stacked--down-left:hover:after {
   transform: translate(10px, -10px);
 }
@@ -305,9 +229,11 @@ a {
 .stacked--down-right:hover {
   transform: translate(5px, 5px);
 }
+
 .stacked--down-right:hover:before {
   transform: translate(-5px, -5px);
 }
+
 .stacked--down-right:hover:after {
   transform: translate(-10px, -10px);
 }
@@ -315,15 +241,20 @@ a {
 .stacked--fan-left {
   transform-origin: center bottom;
 }
-.stacked--fan-left:before, .stacked--fan-left:after {
+
+.stacked--fan-left:before,
+.stacked--fan-left:after {
   transform-origin: center bottom;
 }
+
 .stacked--fan-left:hover {
   transform: translate(-2.5px, 0) rotate(-2.5deg);
 }
+
 .stacked--fan-left:hover:before {
   transform: translate(2.5px, 0) rotate(2.5deg);
 }
+
 .stacked--fan-left:hover:after {
   transform: translate(5px, 0) rotate(5deg);
 }
@@ -331,15 +262,20 @@ a {
 .stacked--fan-right {
   transform-origin: center bottom;
 }
-.stacked--fan-right:before, .stacked--fan-right:after {
+
+.stacked--fan-right:before,
+.stacked--fan-right:after {
   transform-origin: 50% 100%;
 }
+
 .stacked--fan-right:hover {
   transform: translate(2.5px, 0) rotate(2.5deg);
 }
+
 .stacked--fan-right:hover:before {
   transform: translate(-2.5px, 0) rotate(-2.5deg);
 }
+
 .stacked--fan-right:hover:after {
   transform: translate(-5px, 0) rotate(-5deg);
 }
