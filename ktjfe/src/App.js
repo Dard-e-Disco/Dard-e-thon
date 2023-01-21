@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Event from "./Components/Events/Event";
 import "./App.css";
 
-import Modal2 from "./Components/Login copy/components/Modal.js";
+import Modal2 from "./Components/Login/components/Modal.js";
 
 function App() {
   //login-signup
