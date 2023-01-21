@@ -86,15 +86,6 @@ a {
 }
 
 
-
-
-
-
-
-
-
-
-
 [class*=stacked--] {
   position: relative;
   transition: transform 0.3s ease-in-out;
@@ -122,40 +113,6 @@ a {
   z-index: -2;
 }
 
-.stacked--left:before,
-.stacked--left:after {
-  transform-origin: right center;
-}
-
-.stacked--left:hover {
-  transform: translate(-5px, 0);
-}
-
-.stacked--left:hover:before {
-  transform: translate(5px, 0) scale(0.95);
-}
-
-.stacked--left:hover:after {
-  transform: translate(10px, 0) scale(0.9);
-}
-
-.stacked--right:before,
-.stacked--right:after {
-  transform-origin: left center;
-}
-
-.stacked--right:hover {
-  transform: translate(5px, 0);
-}
-
-.stacked--right:hover:before {
-  transform: translate(-5px, 0) scale(0.95);
-}
-
-.stacked--right:hover:after {
-  transform: translate(-10px, 0) scale(0.9);
-}
-
 .stacked--up:before,
 .stacked--up:after {
   transform-origin: center bottom;
@@ -171,111 +128,4 @@ a {
 
 .stacked--up:hover:after {
   transform: translate(0, 10px) scale(0.9);
-}
-
-.stacked--down:before,
-.stacked--down:after {
-  transform-origin: center top;
-}
-
-.stacked--down:hover {
-  transform: translate(0, 5px);
-}
-
-.stacked--down:hover:before {
-  transform: translate(0, -5px) scale(0.95);
-}
-
-.stacked--down:hover:after {
-  transform: translate(0, -10px) scale(0.9);
-}
-
-.stacked--up-left:hover {
-  transform: translate(-5px, -5px);
-}
-
-.stacked--up-left:hover:before {
-  transform: translate(5px, 5px);
-}
-
-.stacked--up-left:hover:after {
-  transform: translate(10px, 10px);
-}
-
-.stacked--up-right:hover {
-  transform: translate(5px, -5px);
-}
-
-.stacked--up-right:hover:before {
-  transform: translate(-5px, 5px);
-}
-
-.stacked--up-right:hover:after {
-  transform: translate(-10px, 10px);
-}
-
-.stacked--down-left:hover {
-  transform: translate(-5px, 5px);
-}
-
-.stacked--down-left:hover:before {
-  transform: translate(5px, -5px);
-}
-
-.stacked--down-left:hover:after {
-  transform: translate(10px, -10px);
-}
-
-.stacked--down-right:hover {
-  transform: translate(5px, 5px);
-}
-
-.stacked--down-right:hover:before {
-  transform: translate(-5px, -5px);
-}
-
-.stacked--down-right:hover:after {
-  transform: translate(-10px, -10px);
-}
-
-.stacked--fan-left {
-  transform-origin: center bottom;
-}
-
-.stacked--fan-left:before,
-.stacked--fan-left:after {
-  transform-origin: center bottom;
-}
-
-.stacked--fan-left:hover {
-  transform: translate(-2.5px, 0) rotate(-2.5deg);
-}
-
-.stacked--fan-left:hover:before {
-  transform: translate(2.5px, 0) rotate(2.5deg);
-}
-
-.stacked--fan-left:hover:after {
-  transform: translate(5px, 0) rotate(5deg);
-}
-
-.stacked--fan-right {
-  transform-origin: center bottom;
-}
-
-.stacked--fan-right:before,
-.stacked--fan-right:after {
-  transform-origin: 50% 100%;
-}
-
-.stacked--fan-right:hover {
-  transform: translate(2.5px, 0) rotate(2.5deg);
-}
-
-.stacked--fan-right:hover:before {
-  transform: translate(-2.5px, 0) rotate(-2.5deg);
-}
-
-.stacked--fan-right:hover:after {
-  transform: translate(-5px, 0) rotate(-5deg);
 }
