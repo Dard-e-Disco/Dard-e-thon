@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Event from"./Components/Events/Event"
 
 import "./App.css";
 import UserContext from "./Context/UserContext";
@@ -61,7 +61,7 @@ function App() {
       <button className="button-landingpage" onClick={toggleLoginModal}>
         Login/Register
       </button>
-      
+      <Event/>
     </div>
   );
 }
