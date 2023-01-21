@@ -2,19 +2,20 @@
   font-family: "RoashePersonalUse-jEa4M";
   src: local("RoashePersonalUse-jEa4M"), url("../font/RoashePersonalUse-jEa4M.otf") format("opentype");
 }
-/* @import url('http://fonts.cdnfonts.com/css/century-gothic'); */
+
 .sgnmodalBackground {
-    width: 100%;
-    height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    background-color: #46331ecf;
-    display: flex;
-    justify-content: center;
-    align-items: center;                                     
-    position: fixed;                                                                                                  
-    inset: 0;
-    z-index: 50;
-  }                                                                        
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: #46331ecf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+
 .sgnmodalContainer {
   /* border-radius: 12px; */
 
@@ -57,6 +58,7 @@
   /* color: rgb(179, 242, 246); */
   color: #dcb07d;
 }
+
 .sgnmodalContainer::-webkit-scrollbar {
   width: 10px;
   background-color: rgba(0, 39, 50, 0.137);
@@ -74,10 +76,12 @@
   background: rgba(0, 0, 0, 0.267);
   border-radius: 10px;
 }
+
 .sgnmodalContainer h4 {
   color: rgb(193, 190, 190);
   text-align: center;
 }
+
 .sgnmodalContainer h4 span {
   /* color: #99eedf; */
   color: #dcb07d;
@@ -85,9 +89,11 @@
   font-weight: 500;
   transition: all.2s;
 }
+
 .sgnmodalContainer h4 span:hover {
   color: #008970;
 }
+
 .sgnbutton {
   /* width: 43%; */
   padding: 10px 20px;
@@ -115,26 +121,30 @@
   font-family: 'Century Gothic', sans-serif;
   font-size: 17px;
 }
+
 #signupm {
   margin: 0 auto;
 }
-.forgot-password-question
-{
+
+.forgot-password-question {
   background-color: rgba(0, 0, 0, 0.9);
   width: 90%;
   margin: 0px auto;
   transform: translateY(-10px);
 }
-#fp{
+
+#fp {
   margin: 0px;
   cursor: pointer;
   color: #dcb07d;
   font-family: 'Century Gothic', sans-serif;
   padding: 10px;
 }
-#fp:hover{
+
+#fp:hover {
   color: #d3934a;
 }
+
 @media only screen and (min-width: 400px) {
   .sgnbutton:hover {
     /* background-position: 100% center; */
@@ -152,11 +162,13 @@
     padding: 0px auo;
     /* height: 67%; */
   }
+
   .sgnbutton {
     color: #ffffffb9;
     /* background-color: rgba(167, 241, 253, 0); */
   }
 }
+
 @media only screen and (max-width: 370px) {
   .sgnmodalContainer {
     width: 90%;
@@ -165,28 +177,26 @@
 }
 
 
-.form-question-container
-{
+.form-question-container {
   background-color: rgba(0, 0, 0, 0.9);
 
   padding: 0.5px 0px;
   margin: 0px 16px;
   transform: translateY(-16px);
 }
-.form-question-container h4
-{
+
+.form-question-container h4 {
   margin: 10px 0px;
 }
 
-.form-question-container-2
-{
+.form-question-container-2 {
   background-color: rgba(0, 0, 0, 0.9);
 
   padding: 0.5px 0px;
   margin: 0px 16px;
   transform: translateY(-8px);
 }
-.form-question-container-2 h4
-{
+
+.form-question-container-2 h4 {
   margin: 12px 0px;
 }

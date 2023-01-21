@@ -3,8 +3,6 @@
   src: local("RoashePersonalUse-jEa4M"), url("./font/RoashePersonalUse-jEa4M.otf") format("opentype");
 }
 
-/* @import url('http://fonts.cdnfonts.com/css/century-gothic'); */
-
 .forgot-form-box1 {
   width: 100%;
   height: 100%;
@@ -18,26 +16,25 @@
   position: relative;
 }
 
-.forgot-form-box1 .forgot-password-heading
-{
+.forgot-form-box1 .forgot-password-heading {
   width: 90%;
   margin: 10px auto;
 }
-.forgot-form-box1 .forgot-password-content
-{
+
+.forgot-form-box1 .forgot-password-content {
   width: 90%;
   margin: 10px auto;
 }
-.forgot-form-box1 .captcha
-{
+
+.forgot-form-box1 .captcha {
   transform: scale(0.9);
 }
+
 .forgot {
   width: 100%;
 }
 
-.forgot .g-recaptcha
-{
+.forgot .g-recaptcha {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,8 +49,8 @@
   margin: 10px 0px;
 
 }
-.forgot-password-heading .close-btn-signin-1
-{
+
+.forgot-password-heading .close-btn-signin-1 {
   height: auto;
 }
 
@@ -62,11 +59,9 @@
 .forgot-form-box1 h2 {
   background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
-  background-image: linear-gradient(
-    to left bottom,
-    #dcb07d,
-    rgb(255, 255, 255)
-  );
+  background-image: linear-gradient(to left bottom,
+      #dcb07d,
+      rgb(255, 255, 255));
   -webkit-background-clip: text;
   color: transparent;
   font-size: 30px;
@@ -167,7 +162,7 @@
 
   .forgot .inputfield {
     margin-top: 1em;
-    
+
   }
 
   .forgot .sgnbutton {
@@ -184,13 +179,11 @@
   padding: 10px;
 }
 
-#email-forgot1
-{
+#email-forgot1 {
   text-align: center;
 }
 
-.fix p
-{
+.fix p {
   text-align: right;
   color: rgb(208, 224, 246);
   margin: 0px;
@@ -198,9 +191,8 @@
 
 }
 
-#forgot2-email,#forgot2-question
-{
+#forgot2-email,
+#forgot2-question {
   display: flex;
   justify-content: space-between;
 }
-
