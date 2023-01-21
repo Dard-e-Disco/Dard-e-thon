@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./SignIn.css";
@@ -7,17 +7,13 @@ import "./SignIn.css";
 import UserContext from "../../Context/UserContext";
 import { useContext } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import GoogleLogin1 from "../GoogleLogin/GoogleLogin";
+// import { useNavigate } from "react-router-dom";
+// import GoogleLogin1 from "../GoogleLogin/GoogleLogin";
 import { prop } from "dom7";
-
 function SignIn(props) {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const usercontext = useContext(UserContext);
-  // const[event,setEvent]=useState([]);
-  const[teamid,setTeamid]=useState();
-  var event=[];
-  const {user, setuser, setUserToken,setIsloggedin,setsf_ID,setregEventsGrp,evID,setregStat } = usercontext;
+  const { setuser, setUserToken,setIsloggedin } = usercontext;
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -38,94 +34,24 @@ function SignIn(props) {
         .then(function (response) {
           // console.log(response);
           if (response.data.code === 0) {
-            // alert(1);s
+            // alert(1);
             setUserToken(response.data.message.token);
             // alert(2);
-            
+
             // console.log("success");
             props.showToast(true, "Successfully Logged In", "Success");
             setuser(response.data.message);
-            // console.log("user",user);
-            // console.log('user', response.data.message)
-            // setsf_ID(response.data.message.sf_id); 
-            // setsf_ID(response.data.message.sf_id); 
-                // setIsloggedin(true)
-                console.log("data", response.data.message.token);
+                setIsloggedin(true)
+                // console.log("data", response.data.message);
                 sessionStorage.setItem(
                   "user",
                   JSON.stringify({
                     token: response.data.message.token,
                     data: response.data.message,
                   })
-                );   
-                sessionStorage.setItem("logstat",true) ;   
-            // localStorage.setItem('logstat',true)
-            
-            axios
-              .post(
-                "https://mainapi.springfest.in/api/user/get_registered_events",
-                {
-                  token: response.data.message.token,
-                }
-              )
-              .then(function (data) {
-                sessionStorage.setItem(
-                  "registered-event",
-                  JSON.stringify(data.data)
-                );
-                // console.log(data.data); 
-                // console.log(data.data.message.group); 
-                
-                for (let i = 0; i < data.data.message.group.length; i++) {
-                  if (evID == data.data.message.group.event_id) {
-                    console.log("found in sign in"); 
-                    setregStat(true);
-                    break;
-                  }
-                }
-                setregEventsGrp(data.data.message.group); 
-
-                const events=JSON.parse(sessionStorage.getItem("registered-event")).message.group;
-                // console.log(events);
-                event=events?.filter((item, i) => {
-                return item.event_name == "Labyrinth";
-                })
-                console.log(event);
-                
-                   // console.log(teamid);
-                  //  setTeamid(event[0]?.group_id);  
-                  
-                    console.log(event[0]?.group_id);
-                    sessionStorage.setItem("teamid",event[0]?.group_id)
-                    axios.post("http://localhost:8000/getInfo/",{
-                      Team_ID:event[0]?.group_id
-                    })
-                    .then((res)=>{
-                      console.log('res', res)
-                      // console.log(res.data.message);
-                       sessionStorage.setItem("Q_id",res.data.Current_qid);
-                     
-                       sessionStorage.setItem("Q_no",res.data.Current_qno);
-                    
-                       sessionStorage.setItem("wrong_attempt",res.data.Wrong_attempts);
-
-                       sessionStorage.setItem('registered-event',null);
-                       props.setOpenModal(false);
-                     
-                    })
-                    .catch((err)=>{
-                      console.log(err);
-                    })
-                      
-                    
-                    
-              })
-              .catch((err2)=>{
-                console.log("error while 2nd API req",err2)
-              }); 
-            
-
-
+                );        
+            // sessionStorage.setItem('logstat',true)
+            props.setOpenModal(false);
           } else {
             props.showToast(true, response.data.message, "Unsuccessful");
           }
@@ -139,9 +65,6 @@ function SignIn(props) {
         });
     },
   });
-
-
-  
 
   return (
     <>
@@ -206,7 +129,7 @@ function SignIn(props) {
             Sign In
           </button>
         </form>
-        <GoogleLogin1 setOpenModal={props.setOpenModal} showToast={props.showToast}/>
+        {/* <GoogleLogin1 setOpenModal={props.setOpenModal} showToast={props.showToast}/> */}
         </div>
       </div>
       </div>
