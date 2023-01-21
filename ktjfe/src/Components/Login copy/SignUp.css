@@ -1,0 +1,229 @@
+@import url('http://fonts.cdnfonts.com/css/century-gothic');
+
+.form-boxp {
+  width: 90%;
+  height: 100%;
+  margin: 1em auto;
+  background: transparent;
+  /* padding: 1rem 3rem; */
+
+  overflow: hidden;
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
+  }
+  .form-boxp h2{
+    font-family: "RoashePersonalUse-jEa4M";
+    background-image: linear-gradient(
+    to left bottom,
+    #dcb07d,
+    rgb(255, 255, 255)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
+  .form-boxpp form{
+    background-color: rgb(198 194 194 / 13%) !important;
+  }
+  .form-boxpp input,.form-boxpp select,.form-boxpp textarea{
+    background-color: #7e7b7b82 !important;
+    color: white !important;
+  }
+  .form-boxpp input::placeholder{
+    color: #cacacaeb;
+  }
+  
+  
+  .form-boxpp input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: #cacacaeb;  }
+  
+  .form-boxpp input::-ms-input-placeholder { /* Microsoft Edge */
+color: #cacacaeb;  }
+  .form-boxpp select::placeholder{
+    color: #cacacaeb;
+  }
+  
+  
+  .form-boxpp select:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: #cacacaeb;  }
+  
+  .form-boxpp select::-ms-input-placeholder { /* Microsoft Edge */
+color: #cacacaeb;  }
+  .form-boxpp textarea::placeholder{
+    color: #cacacaeb;
+  }
+  
+  
+  .form-boxpp textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: #cacacaeb;  }
+  
+  .form-boxpp textarea::-ms-input-placeholder { /* Microsoft Edge */
+color: #cacacaeb;  }
+  .form-boxp h2 {
+    text-align: center;
+   
+    /* -webkit-background-clip: text; */
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .sign-up-content-container
+  {
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    padding: 20px 0px 10px 0px;
+  }
+  .profile {
+    width: 100%;
+    padding: 0px 10px;
+    /* margin: 50px; */
+  }
+  input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+  .profile p {
+    color: rgb(255, 72, 0);
+    font-size: 0.6em;
+    text-align: right;
+    margin-right: 34px;
+    margin-top: 3px;
+  }
+  .profile .inputfield {
+    margin: 0px auto;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0.1rem;
+    width: 90%;
+    border-bottom: 2px solid #ffffffa3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dateinput {
+    text-align: right;
+  }
+  .profile .inputfield input {
+    background: none;
+    border: none;
+    outline: none;
+    float: right;
+    text-align: right;
+    color: white;
+    transition: all 0.3s;
+    padding: 3px;
+    /* margin-left: 0.5rem; */
+    width: 100%;
+    overflow: scroll;
+  }
+  .profile .inputfield select {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    /* border-bottom: 2px solid rgba(222, 250, 204, 0.338); */
+    color: white;
+    margin-left: 0.2rem;
+    text-align: right;
+  }
+  
+  .profile .inputfield select option {
+    background: rgba(4, 18, 55, 0.8);
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    /* border-bottom: 2px solid rgba(222, 250, 204, 0.338); */
+    color: white;                           
+    padding: 4px;
+    
+  }                                                                    
+  .profile .inputfield label {
+    margin-right: 0.5rem;
+    margin-left: 0.3rem;
+    margin-bottom: 3px;
+    padding: 0.2rem 0.1rem 0px 0px;
+    left: 0;
+    line-height: 1.25;
+    color: #ffffffb9;
+    font-size: 1rem;
+    pointer-events: none;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: 200;
+
+    width: 20%;
+  }
+  .profile .inputfield input:focus ~ .inputfield {
+    border-bottom: 3px solid rgb(180, 219, 231);
+    width: 100%;
+    background-color: black;
+  }
+  .profile ul {
+    color: rgb(155, 183, 169);
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  .profile .captcha {
+    display: flex;
+    justify-content: center;
+  }
+ 
+  @media only screen and (max-width: 770px) {
+    .form-boxp {
+      padding: 0rem 0rem;
+      margin: 1rem auto 1rem auto;
+    }
+    .profile {
+      margin: 0em auto;
+    }
+    .profile .sgnbutton {
+      /* margin: 1em auto 1em auto; */
+      /* width: 90%; */
+      margin: 0px 0% 10px 30%;
+    }
+  
+    .profile .captcha {
+      /* transform: scale(0.6); */
+      transform: scale(.8) translateX(0vw);
+    }
+  }
+
+  .sign-up-heading
+  {
+    background-color: rgba(0, 0, 0, 0.9);
+
+    padding: 15px 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    align-items: center;
+    justify-content: center;
+
+  }
+  .sign-up-heading h2
+  {
+    letter-spacing: 2px;
+    margin: 0px 50px;
+    
+  }
+
+  /* #g-recaptcha
+  {
+    transform: scale(1.4) translateX(-3.5vw);
+  } */
+
+  
+
+  
