@@ -41,7 +41,7 @@ const Landingpage = (props) => {
             }
             }}
           >
-            {props.isloggedin ? "Logout":"Login"}
+            {props.isloggedin?"Logout":"Login"}
           </button>
 
           <PostModal
