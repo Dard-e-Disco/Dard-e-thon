@@ -3,16 +3,16 @@ import "./Landingpage.css"
 const Landingpage = () => {
   return (
     <div>
-      <main class="container">
-        <section class="hero container">
-          <h1 class="hero-title-primary">Meet Samantha</h1>
-          <p class="hero-title-sub">
+      <main className="container">
+        <section className="hero container">
+          <h1 className="hero-title-primary">Meet Samantha</h1>
+          <p className="hero-title-sub">
             A Fully Cloud Based AI Operating System That Understands You
           </p>
 
           <button>Try For Free</button>
         </section>
-        <div class="hero-image">
+        <div className="hero-image">
           <figure>
             <svg
               viewBox="0 0 609 612"
@@ -321,7 +321,7 @@ const Landingpage = () => {
       </main>
       <div>
         <svg
-          class="waves"
+          className="waves"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           viewBox="0 24 150 28"
@@ -334,7 +334,7 @@ const Landingpage = () => {
               d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
             />
           </defs>
-          <g class="parallax">
+          <g className="parallax">
             <use
               xlinkHref="#gentle-wave"
               x="48"
