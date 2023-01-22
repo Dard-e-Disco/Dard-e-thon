@@ -10,7 +10,7 @@ const Landingpage = (props) => {
     const logout= ()=>{
         localStorage.clear()
         localStorage.setItem("logstat",false)
-        navigate("/")
+        window.location.reload();
     }
   return (
     <div className="landing-page-parent">
@@ -41,7 +41,7 @@ const Landingpage = (props) => {
             }
             }}
           >
-            Login
+            {props.isloggedin ? "Logout":"Login"}
           </button>
 
           <PostModal
