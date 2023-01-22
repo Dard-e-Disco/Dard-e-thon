@@ -1,5 +1,18 @@
-.Eventrequests{
-    width: 50vw;
-    height: 50vh;
-    background-color: aqua;
+.EventCard{
+    min-width: 80vw;
+    /* height: 25vmin; */
+    background: linear-gradient(rgb(177, 253, 62),yellow);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.5;
+}
+.EventCard:hover{
+    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.users .user button{
+    background-color: rgb(122, 202, 248);
+    float: right;
 }
