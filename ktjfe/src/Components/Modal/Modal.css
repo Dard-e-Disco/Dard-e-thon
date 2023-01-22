@@ -1,0 +1,25 @@
+.modal-parent {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+    gap: 0.25em;
+    flex-direction: column;
+    /* background-color: purple; */
+    flex: 1;
+    inset: 0;
+    /*  */
+}
+
+.post-form
+{
+    /* margin: 10vh 20vh; */
+    padding: 50px 100px;
+    width: 70vh;
+    min-height: 30vh;
+    background-color: brown;
+}

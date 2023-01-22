@@ -1,6 +1,8 @@
 import React from "react";
+import Modal from "../Modal/Modal";
 import "./Landingpage.css";
-const Landingpage = () => {
+
+const Landingpage = (props) => {
   return (
     <div className="landing-page-parent">
       <main className="container">
@@ -10,9 +12,17 @@ const Landingpage = () => {
             A Fully Cloud Based AI Operating System That Understands You
           </p>
 
-          <div className="post-div">
-            <button className="post-button">Try For Free</button>
-          </div>
+          <button
+            className="post-button"
+            onClick={() => {
+              props.Show_Modal();
+              console.log("post-button-clicked");
+            }}
+          >
+            Post
+          </button>
+
+          <Modal show={props.Open_Modal} close_modal={props.closeModal}></Modal>
         </section>
         <div className="hero-image">
           <figure>
