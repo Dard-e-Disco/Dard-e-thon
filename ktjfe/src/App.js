@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Landingpage from "./Components/Landingpage/Landingpage";
-import PostedEvents from "./Components/PostedEvents/Postedevents";
+import Postedevents from "./Components/PostedEvents/Postedevents";
 import EventRequests from "./Components/EventRequests/Eventrequests";
-import AllEvents from "./Components/AllEvents/Allevents";
 import Modal from "./Components/Modal/Modal";
 
 import { Routes, Route } from "react-router-dom";
+
 const App = () => {
   const [Open_Modal, setOpen_Modal] = useState(false);
   const closeModal = () => {
@@ -28,9 +28,8 @@ const App = () => {
             />
           }
         />
-        <Route exact path="/postedEvents" element={<PostedEvents />} />
+        <Route exact path="/postedEvents" element={<Postedevents />} />
         <Route exact path="/requests" element={<EventRequests />} />
-        <Route exact path="/allevents" element={<AllEvents />} />
       </Routes>
     </div>
   );
