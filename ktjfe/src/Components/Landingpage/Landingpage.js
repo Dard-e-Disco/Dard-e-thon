@@ -1,8 +1,8 @@
 import React from "react";
-import "./Landingpage.css"
+import "./Landingpage.css";
 const Landingpage = () => {
   return (
-    <div>
+    <div className="landing-page-parent">
       <main className="container">
         <section className="hero container">
           <h1 className="hero-title-primary">Meet Samantha</h1>
@@ -10,7 +10,9 @@ const Landingpage = () => {
             A Fully Cloud Based AI Operating System That Understands You
           </p>
 
-          <button>Try For Free</button>
+          <div className="post-div">
+            <button className="post-button">Try For Free</button>
+          </div>
         </section>
         <div className="hero-image">
           <figure>
