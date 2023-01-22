@@ -21,7 +21,9 @@ const Login = (props) => {
           password: formik.values.password,
         })
         .then(function (response) {
-          console.log(response);
+          localStorage.setItem("token",response.data.authToken)
+          localStorage.setItem("user",JSON.stringify(response.data.user))
+          localStorage.setItem("logstat",true)
         })
         .catch(function (error) {
           console.log(error.message);
