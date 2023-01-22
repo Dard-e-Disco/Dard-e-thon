@@ -27,6 +27,9 @@ const Login = (props) => {
           localStorage.setItem("logstat", true);
           props.setIsloggedin(true)
           console.log("Succesfully Logged in");
+          props.setMsg("Successfully Signed In!")
+
+          props.showToastMessage();
         })
         .catch(function (error) {
           console.log(error.message);

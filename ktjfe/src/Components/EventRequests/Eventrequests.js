@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './EventRequests.css';
 
-const Eventrequests = () => {
+const Eventrequests = (props) => {
     const [event, setEvent] = useState([]);
     const [requests, setRequests] = useState();
     // const userID = JSON.parse(localStorage.getItem("user"))._id;
@@ -41,6 +41,9 @@ const Eventrequests = () => {
                         })
                         setEvent(JSON.parse(JSON.stringify(eventcreated)));
                         console.log(res)
+                        if (tof == true) props.setMsg("Accepted")
+                        else props.setMsg("Rejected")
+                        props.showToastMessage();
 
                     })
 
@@ -55,6 +58,7 @@ const Eventrequests = () => {
 
     return (
         <div className="Eventrequests">
+            <h1>Requests</h1>
             {event.map((item, i) => {
                 // { request(item) }
                 return (<div className="EventCard">
@@ -66,8 +70,8 @@ const Eventrequests = () => {
                         {item.UserRequested.map((item1, i) => {
                             return (<div className="user">
                                 {item1.UserID}
-                                <button onClick={() => { response(item1, true, item) }}>ACCEPT</button>
                                 <button onClick={() => { response(item1, false, item) }}>REJECT</button>
+                                <button onClick={() => { response(item1, true, item) }}>ACCEPT</button>
                             </div>
 
                             )
