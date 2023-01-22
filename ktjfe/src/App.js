@@ -46,7 +46,7 @@ const App = () => {
       <Navbar OpenLogin_Modal={OpenLogin_Modal}
               closeLoginModal={closeLoginModal}
               ShowLogin_Modal={ShowLogin_Modal}
-              {/* <button onClick={showToastMessage}>Notify</button> */}isloggedin={isloggedin}/>{/* <Signin /> */}
+             isloggedin={isloggedin}/>{/* <Signin /> */}
       <Routes>
         <Route
           exact
