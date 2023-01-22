@@ -1,7 +1,7 @@
 .login-form {
     /* margin: 10vh 20vh; */
     padding: 50px 100px;
-    width: 70vh;
+    width: 50vw;
     min-height: 30vh;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -9,4 +9,36 @@
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: left;
+    /* margin: 10px; */
+}
+.inputfield label{
+    float: left;
+    color: white;
+}
+.inputfield input{
+    float: right;
+    min-width: 50%;
+}
+.login{
+    background-color: white;
+    width: 10vmin;
+    height: 5vmin;
+    border-radius: 5%;
+    margin: 5px;
+
+}
+.signup{
+    background-color: white;
+    width: 10vmin;
+    height: 5vmin;
+    border-radius: 5%;
+    margin: 5px;
+}
+.closing-cross{
+    scale: 1.5;
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 5px;
 }
