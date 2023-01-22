@@ -21,7 +21,9 @@ const Postedevents = () => {
         }
     },).then(response=>{
       console.log('response', response)
-      alert("Your request is successfully sent")
+      if(response.data.code===0){
+        alert("Your request is sent successfully")
+      }
     })
   }
 
