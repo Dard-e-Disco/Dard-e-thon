@@ -56,14 +56,7 @@ function PostModal(props) {
   return (
     props.show && (
       <div className="modal-parent">
-        <div
-          className="closing-cross"
-          onClick={() => {
-            props.close_modal();
-          }}
-        >
-          X
-        </div>
+        
         <div
           className="post-form"
           onClick={(event) => {
@@ -75,6 +68,14 @@ function PostModal(props) {
             //   }
           }}
         >
+          <div
+          className="closing-cross"
+          onClick={() => {
+            props.close_modal();
+          }}
+        >
+          X
+        </div>
           <form onSubmit={formik.handleSubmit} className="profile">
             <div className="inputfield">
               <label for="EventName" class="">
