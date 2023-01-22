@@ -77,7 +77,7 @@ const Signin = (props) => {
           />
         </div>
         <button className="sgnbutton" id="sign-in-button-id" type="submit">
-          Sign In
+          Sign Up
         </button>
       </form>
     </>

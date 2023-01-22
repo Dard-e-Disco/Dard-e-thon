@@ -15,7 +15,6 @@ const App = () => {
   };
   return (
     <div>
-      <Login/>
       <Routes>
         <Route
           exact
