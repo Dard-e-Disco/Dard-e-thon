@@ -26,7 +26,7 @@ const App = () => {
 
   const [OpenSignup_Modal, setOpenSignup_Modal] = useState(false);
   const closeSignupModal = () => {
-    setOpenLogin_Modal(false);
+    setOpenSignup_Modal(false);
   };
   const ShowSignup_Modal = () => {
     setOpenSignup_Modal(true);
@@ -48,11 +48,9 @@ const App = () => {
               Open_Modal={Open_Modal}
               closeModal={closeModal}
               Show_Modal={Show_Modal}
-
               OpenLogin_Modal={OpenLogin_Modal}
               closeLoginModal={closeLoginModal}
               ShowLogin_Modal={ShowLogin_Modal}
-
               OpenSignup_Modal={OpenSignup_Modal}
               closeSignupModal={closeSignupModal}
               ShowSignup_Modal={ShowSignup_Modal}

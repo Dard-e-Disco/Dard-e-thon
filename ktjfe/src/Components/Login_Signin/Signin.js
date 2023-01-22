@@ -51,7 +51,7 @@ const Signup = (props) => {
           <div
             className="closing-cross"
             onClick={() => {
-              props.closeLogin_modal();
+              props.closeSignup_modal();
             }}
           >
             X
@@ -63,7 +63,7 @@ const Signup = (props) => {
               <input
                 type="text"
                 id="name"
-                class=""
+                className=""
                 required
                 autoComplete="off"
                 value={formik.values.name}
@@ -100,6 +100,13 @@ const Signup = (props) => {
               Sign In
             </button>
           </form>
+          <button className="post-button" onClick={() => {
+              props.closeSignup_modal();
+              props.ShowLogin_Modal();
+              console.log("Login-button-clicked");
+            }}>
+             Login
+            </button>
         </div>
       </div>
     )
