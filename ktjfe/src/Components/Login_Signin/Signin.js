@@ -27,6 +27,7 @@ const Signup = (props) => {
           localStorage.setItem("token", response.data.authToken);
           localStorage.setItem("user", JSON.stringify(response.data.user));
           localStorage.setItem("logstat", true);
+          props.closeSignup_modal();
         })
         .catch(function (error) {
           console.log(error.message);

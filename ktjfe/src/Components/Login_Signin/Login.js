@@ -30,6 +30,8 @@ const Login = (props) => {
           props.setMsg("Successfully Signed In!");
 
           props.showToastMessage();
+          props.closeLogin_modal();
+
         })
         .catch(function (error) {
           console.log(error.message);
