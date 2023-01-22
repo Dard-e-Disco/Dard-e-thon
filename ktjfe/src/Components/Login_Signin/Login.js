@@ -84,14 +84,15 @@ const Login = (props) => {
             <button className="sgnbutton" id="sign-in-button-id" type="submit">
               Log In
             </button>
-            <button className="sgnbutton" id="sign-in-button-id" onClick={() => {
+            
+          </form>
+          <button className="post-button" onClick={() => {
               props.ShowSignup_Modal();
               props.closeLogin_modal();
               console.log("Signup-button-clicked");
             }}>
               Signup
             </button>
-          </form>
         </div>
       </div>
     )
