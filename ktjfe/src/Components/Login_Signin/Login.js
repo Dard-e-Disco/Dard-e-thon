@@ -61,7 +61,7 @@ const Login = (props) => {
           />
         </div>
         <button className="sgnbutton" id="sign-in-button-id" type="submit">
-          Sign In
+          Log In
         </button>
       </form>
     </>
