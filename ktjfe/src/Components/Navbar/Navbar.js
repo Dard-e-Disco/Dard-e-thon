@@ -10,7 +10,7 @@ const Navbar = (props) => {
     }
   return (
     <header class="text-gray-600 body-font ">
-      <div class="mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center fixed w-full bg-white ">
+      <div class="mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center w-full bg-white ">
         <Link to={"/"} class="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
           <img src="https://i.pinimg.com/originals/0a/1f/82/0a1f820e29719c7b67e9d5aa44241155.png" className='w-16 h-16 text-white p-2 rounded-full' alt="" />
           <span class="ml-3 text-xl">DARD</span>
