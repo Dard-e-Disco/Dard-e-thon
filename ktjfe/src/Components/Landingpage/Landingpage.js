@@ -9,9 +9,9 @@ const Landingpage = (props) => {
     <div className="landing-page-parent">
       <main className="container">
         <section className="hero container">
-          <h1 className="hero-title-primary">Meet Samantha</h1>
+          <h1 className="hero-title-primary">Search Teams</h1>
           <p className="hero-title-sub">
-            A Fully Cloud Based AI Operating System That Understands You
+            Place to search for the team members to participate in various events
           </p>
 
           <button
