@@ -5,6 +5,7 @@ import Eventrequests from "./Components/EventRequests/Eventrequests";
 
 import { Routes, Route } from "react-router-dom";
 import Login from "./Components/Login_Signin/Login";
+import Navbar from "./Components/Navbar/Navbar";
 const App = () => {
   const [Open_Modal, setOpen_Modal] = useState(false);
   const closeModal = () => {
@@ -21,10 +22,14 @@ const App = () => {
   const ShowLogin_Modal = () => {
     setOpenLogin_Modal(true);
   };
+  const [isloggedin, setIsloggedin] = useState(false)
 
   return (
     <div>
-      
+      <Navbar OpenLogin_Modal={OpenLogin_Modal}
+              closeLoginModal={closeLoginModal}
+              ShowLogin_Modal={ShowLogin_Modal}
+              isloggedin={isloggedin}/>
       <Routes>
         <Route
           exact
@@ -44,6 +49,11 @@ const App = () => {
         <Route exact path="/postedEvents" element={<Postedevents />} />
         <Route exact path="/requests" element={<Eventrequests />} />
       </Routes>
+      <Login
+            show={OpenLogin_Modal}
+            closeLogin_modal={closeLoginModal}
+            setIsloggedin={setIsloggedin}
+          ></Login>
     </div>
   );
 };

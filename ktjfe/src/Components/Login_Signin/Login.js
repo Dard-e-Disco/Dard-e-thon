@@ -25,6 +25,7 @@ const Login = (props) => {
           localStorage.setItem("token", response.data.authToken);
           localStorage.setItem("user", JSON.stringify(response.data.user));
           localStorage.setItem("logstat", true);
+          props.setIsloggedin(true)
           console.log("Succesfully Logged in");
         })
         .catch(function (error) {
