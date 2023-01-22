@@ -75,6 +75,7 @@ const Login = (props) => {
                 onBlur={formik.handleBlur}
               />
             </div>
+            <br />
             <div className="inputfield" id="signin-password">
               <span>{/* <RiIcons.RiLockPasswordFill /> */}</span>
               <label>PASSWORD</label>
@@ -87,12 +88,13 @@ const Login = (props) => {
                 onBlur={formik.handleBlur}
               />
             </div>
-            <button className="post-button" type="submit">
+            <br />
+            <button className="login" type="submit">
               Log In
             </button>
           </form>
           <button
-            className="post-button"
+            className="signup"
             onClick={() => {
               props.ShowSignup_Modal();
               props.closeLogin_modal();
