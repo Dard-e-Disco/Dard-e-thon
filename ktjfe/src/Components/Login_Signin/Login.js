@@ -35,8 +35,7 @@ const Login = (props) => {
   });
 
   return (
-    
-      props.show && (
+    props.show && (
       <div className="modal-parent">
         <div
           className="login-form"
@@ -49,48 +48,55 @@ const Login = (props) => {
             //   }
           }}
         >
-        <div
-          className="closing-cross"
-          onClick={() => {
-            props.closeLogin_modal();
-          }}
-        >
-          X
+          <div
+            className="closing-cross"
+            onClick={() => {
+              props.closeLogin_modal();
+            }}
+          >
+            X
+          </div>
+          <form onSubmit={formik.handleSubmit}>
+            <div className="inputfield">
+              <span>{/* <FaIcons.FaUserTie /> */}</span>
+              <label>EMAIL</label>
+              <input
+                name="email"
+                type="email"
+                required
+                autoComplete="off"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+            </div>
+            <div className="inputfield" id="signin-password">
+              <span>{/* <RiIcons.RiLockPasswordFill /> */}</span>
+              <label>PASSWORD</label>
+              <input
+                name="password"
+                type="password"
+                required
+                value={formik.values.password}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+            </div>
+            <button className="sgnbutton" id="sign-in-button-id" type="submit">
+              Log In
+            </button>
+            
+          </form>
+          <button className="post-button" onClick={() => {
+              props.ShowSignup_Modal();
+              props.closeLogin_modal();
+              console.log("Signup-button-clicked");
+            }}>
+              Signup
+            </button>
         </div>
-        <form onSubmit={formik.handleSubmit}>
-          <div className="inputfield">
-            <span>{/* <FaIcons.FaUserTie /> */}</span>
-            <label>EMAIL</label>
-            <input
-              name="email"
-              type="email"
-              required
-              autoComplete="off"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-          </div>
-          <div className="inputfield" id="signin-password">
-            <span>{/* <RiIcons.RiLockPasswordFill /> */}</span>
-            <label>PASSWORD</label>
-            <input
-              name="password"
-              type="password"
-              required
-              value={formik.values.password}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-          </div>
-          <button className="sgnbutton" id="sign-in-button-id" type="submit">
-            Log In
-          </button>
-        </form>
       </div>
-      </div>
-      )
-    
+    )
   );
 };
 

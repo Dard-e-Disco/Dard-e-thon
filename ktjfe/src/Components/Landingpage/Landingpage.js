@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "../Login_Signin/Login";
+import Signup from "../Login_Signin/Signin";
 import "./Landingpage.css";
 import PostModal from "./PostModal/PostModal";
 
@@ -37,8 +38,13 @@ const Landingpage = (props) => {
             show={props.Open_Modal}
             close_modal={props.closeModal}
           ></PostModal>
+            ShowSignup_Modal={props.Signup_Modal}
           
-        </section>
+          <Signup
+            show={props.OpenSignup_Modal}
+            closeSignup_modal={props.closeSignupModal}
+          ></Signup>
+        </section>  
         <div className="hero-image">
           <figure>
             <svg
