@@ -1,10 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Login from "../Login_Signin/Login";
 import Signup from "../Login_Signin/Signin";
 import "./Landingpage.css";
 import PostModal from "./PostModal/PostModal";
 
 const Landingpage = (props) => {
+  const navigate = useNavigate()
+    const logout= ()=>{
+        localStorage.clear()
+        localStorage.setItem("logstat",false)
+        navigate("/")
+    }
   return (
     <div className="landing-page-parent">
       <main className="container">
@@ -26,9 +33,12 @@ const Landingpage = (props) => {
 
           <button
             className="login-button"
-            onClick={() => {
+            onClick={() => {if(props.isloggedin){
+              logout()
+            }else{
               props.ShowLogin_Modal();
-              console.log("login-button-clicked");
+            console.log("login-button-clicked");
+            }
             }}
           >
             Login
@@ -41,6 +51,7 @@ const Landingpage = (props) => {
           <Login
             show={props.OpenLogin_Modal}
             closeLogin_modal={props.closeLoginModal}
+            ShowSignup_Modal={props.ShowSignup_Modal}
             setMsg={props.setMsg}
             showToastMessage={props.showToastMessage}
           ></Login>
