@@ -48,18 +48,7 @@ const Landingpage = (props) => {
             show={props.Open_Modal}
             close_modal={props.closeModal}
           ></PostModal>
-          <Login
-            show={props.OpenLogin_Modal}
-            closeLogin_modal={props.closeLoginModal}
-            ShowSignup_Modal={props.ShowSignup_Modal}
-            setMsg={props.setMsg}
-            showToastMessage={props.showToastMessage}
-          ></Login>
-          <Signup
-            show={props.OpenSignup_Modal}
-            closeSignup_modal={props.closeSignupModal}
-            ShowLogin_Modal={props.ShowLogin_Modal}
-          ></Signup>
+          
         </section>  
         <div className="hero-image">
           <figure>
