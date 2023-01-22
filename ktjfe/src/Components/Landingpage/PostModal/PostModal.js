@@ -1,8 +1,8 @@
 import React from "react";
-import "./Modal.css";
+import "./PostModal.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-function Modal(props) {
+function PostModal(props) {
   const formik = useFormik({
     initialValues: {
       evename: "",
@@ -122,4 +122,4 @@ function Modal(props) {
   );
 }
 
-export default Modal;
+export default PostModal;

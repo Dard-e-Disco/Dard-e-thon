@@ -5,6 +5,7 @@ import EventRequests from "./Components/EventRequests/Eventrequests";
 import Modal from "./Components/Modal/Modal";
 
 import { Routes, Route } from "react-router-dom";
+
 const App = () => {
   const [Open_Modal, setOpen_Modal] = useState(false);
   const closeModal = () => {
