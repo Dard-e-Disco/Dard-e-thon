@@ -162,6 +162,21 @@ main {
   text-align: center;
   text-decoration: none;
   font-size: 25px;
+  margin: 5px;
+}
+.login-button {
+  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
 }
 
 .post-button:hover {

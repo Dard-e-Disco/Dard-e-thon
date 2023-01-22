@@ -13,9 +13,18 @@ const App = () => {
   const Show_Modal = () => {
     setOpen_Modal(true);
   };
+
+  const [OpenLogin_Modal, setOpenLogin_Modal] = useState(false);
+  const closeLoginModal = () => {
+    setOpenLogin_Modal(false);
+  };
+  const ShowLogin_Modal = () => {
+    setOpenLogin_Modal(true);
+  };
+
   return (
     <div>
-      <Login/>
+      
       <Routes>
         <Route
           exact
@@ -25,6 +34,10 @@ const App = () => {
               Open_Modal={Open_Modal}
               closeModal={closeModal}
               Show_Modal={Show_Modal}
+
+              OpenLogin_Modal={OpenLogin_Modal}
+              closeLoginModal={closeLoginModal}
+              ShowLogin_Modal={ShowLogin_Modal}
             />
           }
         />
