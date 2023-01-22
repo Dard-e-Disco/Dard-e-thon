@@ -2,13 +2,15 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-const Login = (props) => {
+const Signin = (props) => {
   const formik = useFormik({
     initialValues: {
+      name: "",
       email: "",
       password: "",
     },
     validationSchema: Yup.object({
+      name: Yup.string().required("Required"),
       email: Yup.string().email("Invalid Email").required("Required"),
       password: Yup.string()
         .min(6, "Password length must be atleast than 8 letters")
@@ -16,7 +18,8 @@ const Login = (props) => {
     }),
     onSubmit: (values) => {
       axios
-        .post("http://localhost:5000/api/auth/login", {
+        .post("http://localhost:5000/api/auth/signin", {
+          name: formik.values.name,
           email: formik.values.email,
           password: formik.values.password,
         })
@@ -32,6 +35,20 @@ const Login = (props) => {
   return (
     <>
       <form onSubmit={formik.handleSubmit}>
+        <div className="inputfield">
+          <span>{/* <FaIcons.FaUserTie /> */}</span>
+          <label>Name</label>
+          <input
+            type="text"
+            id="name"
+            class=""
+            required
+            autoComplete="off"
+            value={formik.values.name}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+        </div>
         <div className="inputfield">
           <span>{/* <FaIcons.FaUserTie /> */}</span>
           <label>EMAIL</label>
@@ -65,4 +82,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default Signin;
