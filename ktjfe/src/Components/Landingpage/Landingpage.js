@@ -1,6 +1,6 @@
 import React from "react";
-import Modal from "../Modal/Modal";
 import "./Landingpage.css";
+import PostModal from "./PostModal/PostModal";
 
 const Landingpage = (props) => {
   return (
@@ -22,7 +22,7 @@ const Landingpage = (props) => {
             Post
           </button>
 
-          <Modal show={props.Open_Modal} close_modal={props.closeModal}></Modal>
+          <PostModal show={props.Open_Modal} close_modal={props.closeModal}></PostModal>
         </section>
         <div className="hero-image">
           <figure>
