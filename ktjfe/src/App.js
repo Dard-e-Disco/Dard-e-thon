@@ -45,9 +45,9 @@ const App = () => {
   return (
     <div>
       <Navbar OpenLogin_Modal={OpenLogin_Modal}
-              closeLoginModal={closeLoginModal}
-              ShowLogin_Modal={ShowLogin_Modal}
-              isloggedin={isloggedin}/>{/* <Signin /> */}
+        closeLoginModal={closeLoginModal}
+        ShowLogin_Modal={ShowLogin_Modal}
+        isloggedin={isloggedin} />
       <Routes>
         <Route
           exact
@@ -69,15 +69,15 @@ const App = () => {
         <Route exact path="/postedEvents" element={<Postedevents />} />
         <Route exact path="/requests" element={<Eventrequests showToastMessage={showToastMessage} setMsg={setMsg} />} />
       </Routes>
-      {/* <Login
-            show={OpenLogin_Modal}
-            closeLogin_modal={closeLoginModal}
-            setIsloggedin={setIsloggedin}
-          ></Login>
-          <Signup
-            show={OpenSignup_Modal}
-            closeSignup_modal={closeSignupModal}
-          ></Signup> */}
+      <Login
+        show={OpenLogin_Modal}
+        closeLogin_modal={closeLoginModal}
+        setIsloggedin={setIsloggedin}
+      ></Login>
+      <Signup
+        show={OpenSignup_Modal}
+        closeSignup_modal={closeSignupModal}
+      ></Signup>
 
       <ToastContainer />
     </div>
