@@ -1,4 +1,6 @@
 import React from "react";
+import Login from "../Login_Signin/Login";
+import Signup from "../Login_Signin/Signin";
 import "./Landingpage.css";
 import PostModal from "./PostModal/PostModal";
 
@@ -22,8 +24,30 @@ const Landingpage = (props) => {
             Post
           </button>
 
-          <PostModal show={props.Open_Modal} close_modal={props.closeModal}></PostModal>
-        </section>
+          <button
+            className="login-button"
+            onClick={() => {
+              props.ShowLogin_Modal();
+              console.log("login-button-clicked");
+            }}
+          >
+            Login
+          </button>
+
+          <PostModal
+            show={props.Open_Modal}
+            close_modal={props.closeModal}
+          ></PostModal>
+          <Login
+            show={props.OpenLogin_Modal}
+            closeLogin_modal={props.closeLoginModal}
+            ShowSignup_Modal={props.Signup_Modal}
+          ></Login>
+          <Signup
+            show={props.OpenSignup_Modal}
+            closeSignup_modal={props.closeSignupModal}
+          ></Signup>
+        </section>  
         <div className="hero-image">
           <figure>
             <svg

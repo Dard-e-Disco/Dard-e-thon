@@ -4,6 +4,8 @@ import { useFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
 function PostModal(props) {
+  const data = JSON.parse(localStorage.getItem("data"));
+  
   const formik = useFormik({
     initialValues: {
       EventName: "",
