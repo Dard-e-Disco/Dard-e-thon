@@ -3,9 +3,6 @@ import "./PostModal.css";
 import { useFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 function PostModal(props) {
   const formik = useFormik({
     initialValues: {
@@ -27,7 +24,7 @@ function PostModal(props) {
         .post(
           "http://localhost:5000/api/event/PostEvent",
           {
-            "CreatorID": "63cce87389f1e9f79fc976a5",
+            CreatorID: "63cce87389f1e9f79fc976a5",
             EventName: formik.values.EventName,
             desc: formik.values.desc,
             np: formik.values.np,
@@ -44,7 +41,7 @@ function PostModal(props) {
         .then(function (response) {
           if (response.data.code === 0) {
             console.log("successful");
-
+            props.close_modal();
           } else {
           }
           return response.data;
