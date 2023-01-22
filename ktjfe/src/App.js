@@ -35,6 +35,7 @@ const App = () => {
     setOpenSignup_Modal(true);
   };
   const [isloggedin, setIsloggedin] = useState(false)
+
   const showToastMessage = (msg) => {
     toast.success({ msg }, {
       position: toast.POSITION.TOP_RIGHT
@@ -46,7 +47,7 @@ const App = () => {
       <Navbar OpenLogin_Modal={OpenLogin_Modal}
               closeLoginModal={closeLoginModal}
               ShowLogin_Modal={ShowLogin_Modal}
-              {/* <button onClick={showToastMessage}>Notify</button> */}isloggedin={isloggedin}/>{/* <Signin /> */}
+              isloggedin={isloggedin}/>{/* <Signin /> */}
       <Routes>
         <Route
           exact
@@ -68,7 +69,7 @@ const App = () => {
         <Route exact path="/postedEvents" element={<Postedevents />} />
         <Route exact path="/requests" element={<Eventrequests showToastMessage={showToastMessage} setMsg={setMsg} />} />
       </Routes>
-      <Login
+      {/* <Login
             show={OpenLogin_Modal}
             closeLogin_modal={closeLoginModal}
             setIsloggedin={setIsloggedin}
@@ -76,7 +77,7 @@ const App = () => {
           <Signup
             show={OpenSignup_Modal}
             closeSignup_modal={closeSignupModal}
-          ></Signup>
+          ></Signup> */}
 
       <ToastContainer />
     </div>

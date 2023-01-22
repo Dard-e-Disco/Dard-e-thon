@@ -41,6 +41,7 @@ const Landingpage = (props) => {
           <Login
             show={props.OpenLogin_Modal}
             closeLogin_modal={props.closeLoginModal}
+            ShowSignup_Modal={props.ShowSignup_Modal}
             setMsg={props.setMsg}
             showToastMessage={props.showToastMessage}
           ></Login>
