@@ -68,6 +68,8 @@ const App = () => {
               OpenSignup_Modal={OpenSignup_Modal}
               closeSignupModal={closeSignupModal}
               ShowSignup_Modal={ShowSignup_Modal}
+        isloggedin={isloggedin}
+
             />
           }
         />
