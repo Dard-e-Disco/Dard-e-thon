@@ -3,9 +3,9 @@ import Landingpage from "./Components/Landingpage/Landingpage";
 import Postedevents from "./Components/PostedEvents/Postedevents";
 import Eventrequests from "./Components/EventRequests/Eventrequests";
 import { Routes, Route } from "react-router-dom";
-// import Login from "./Components/Login_Signin/Login";
+import Login from "./Components/Login_Signin/Login";
 import Navbar from "./Components/Navbar/Navbar";
-// import Signup from "./Components/Login_Signin/Signup";
+import Signup from "./Components/Login_Signin/Signin";
 
 const App = () => {
   const [Open_Modal, setOpen_Modal] = useState(false);
@@ -67,6 +67,10 @@ const App = () => {
             closeLogin_modal={closeLoginModal}
             setIsloggedin={setIsloggedin}
           ></Login>
+          <Signup
+            show={OpenSignup_Modal}
+            closeSignup_modal={closeSignupModal}
+          ></Signup>
     </div>
   );
 };

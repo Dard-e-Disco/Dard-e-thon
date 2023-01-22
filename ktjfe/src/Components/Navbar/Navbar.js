@@ -10,7 +10,7 @@ const Navbar = (props) => {
       </a>
       <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
         {props.isloggedin&&<Link to={"/requests"} class="mr-5 hover:text-gray-900">Dashboasrd</Link>}
-        <Link class="mr-5 hover:text-gray-900">PostedEvents</Link>
+        <Link  class="mr-5 hover:text-gray-900">PostedEvents</Link>
         <a class="mr-5 hover:text-gray-900">Third Link</a>
         <a class="mr-5 hover:text-gray-900">Fourth Link</a>
       </nav>
