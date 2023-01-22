@@ -3,6 +3,9 @@ import "./PostModal.css";
 import { useFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function PostModal(props) {
   const formik = useFormik({
     initialValues: {
@@ -41,7 +44,7 @@ function PostModal(props) {
         .then(function (response) {
           if (response.data.code === 0) {
             console.log("successful");
-            
+
           } else {
           }
           return response.data;
