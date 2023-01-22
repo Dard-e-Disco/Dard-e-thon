@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import Landingpage from "./Components/Landingpage/Landingpage";
 import Postedevents from "./Components/PostedEvents/Postedevents";
 import Eventrequests from "./Components/EventRequests/Eventrequests";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Routes, Route } from "react-router-dom";
 import Login from "./Components/Login_Signin/Login";
 import Navbar from "./Components/Navbar/Navbar";
 import Signup from "./Components/Login_Signin/Signin";
 
 const App = () => {
-  const [msg, setMsg] = useState("Success!")
+  const [msg, setMsg] = useState("Success!");
   const [Open_Modal, setOpen_Modal] = useState(false);
   const closeModal = () => {
     setOpen_Modal(false);
@@ -34,20 +34,25 @@ const App = () => {
   const ShowSignup_Modal = () => {
     setOpenSignup_Modal(true);
   };
-  const [isloggedin, setIsloggedin] = useState(false)
+  const [isloggedin, setIsloggedin] = useState(false);
 
   const showToastMessage = (msg) => {
-    toast.success({ msg }, {
-      position: toast.POSITION.TOP_RIGHT
-    });
+    toast.success(
+      { msg },
+      {
+        position: toast.POSITION.TOP_RIGHT,
+      }
+    );
   };
 
   return (
     <div>
-      <Navbar OpenLogin_Modal={OpenLogin_Modal}
+      <Navbar
+        OpenLogin_Modal={OpenLogin_Modal}
         closeLoginModal={closeLoginModal}
         ShowLogin_Modal={ShowLogin_Modal}
-        isloggedin={isloggedin} />
+        isloggedin={isloggedin}
+      />
       <Routes>
         <Route
           exact
@@ -67,16 +72,29 @@ const App = () => {
           }
         />
         <Route exact path="/postedEvents" element={<Postedevents />} />
-        <Route exact path="/requests" element={<Eventrequests showToastMessage={showToastMessage} setMsg={setMsg} />} />
+        <Route
+          exact
+          path="/requests"
+          element={
+            <Eventrequests
+              showToastMessage={showToastMessage}
+              setMsg={setMsg}
+            />
+          }
+        />
       </Routes>
       <Login
         show={OpenLogin_Modal}
         closeLogin_modal={closeLoginModal}
         setIsloggedin={setIsloggedin}
+        ShowSignup_Modal={ShowSignup_Modal}
+        setMsg={setMsg}
+        showToastMessage={showToastMessage}
       ></Login>
       <Signup
         show={OpenSignup_Modal}
         closeSignup_modal={closeSignupModal}
+        ShowLogin_Modal={ShowLogin_Modal}
       ></Signup>
 
       <ToastContainer />
