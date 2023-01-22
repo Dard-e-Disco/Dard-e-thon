@@ -5,8 +5,8 @@ import './EventRequests.css';
 const Eventrequests = (props) => {
     const [event, setEvent] = useState([]);
     const [requests, setRequests] = useState();
-    // const userID = JSON.parse(localStorage.getItem("user"))._id;
-    const userID = "63cbbf79681fad285f88b3e1";
+    const userID = JSON.parse(localStorage.getItem("user"))._id;
+    // const userID = "63cbbf79681fad285f88b3e1";
     useEffect(() => {
 
         axios
