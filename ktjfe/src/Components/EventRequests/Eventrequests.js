@@ -2,48 +2,64 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const Eventrequests = () => {
-    const [event, setEvent] = useState();
+    const [event, setEvent] = useState([]);
     const [requests, setRequests] = useState();
+    // const userID = localStorage.getItem("user");
+    const userID = "63cbbf79681fad285f88b3e1";
     useEffect(() => {
 
         axios
-            .get('/getAllEvents')
+            .get('http://localhost:5000/api/event/getAllEvents')
             .then((res) => {
-                setEvent(res.data)
-            })
-    }, []);
-    const request = (e) => {
-        axios
-            .post('/EventJoinRequest', {
-                EventID: e.eventid,
-                UserID: e.userid
-            })
-            .then((res) => {
-                setRequests(res.data)
-            })
-            .catch((err) => {
-                console.log(err);
+                const eventcreated = res.data.filter((item) => {
+                    return (item.CreatorID == userID)
+                })
+                setEvent(eventcreated);
+                console.log(res)
+
             })
 
+    }, []);
+    const response = (e, tof, item) => {
+        axios
+            .post(('http://localhost:5000/api/event/RequestResponse'), {
+                Headers: {
+                    'auth-token': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2QwZTk4NTI1ZDUyMTY0ZWY1MWJmYSIsImlhdCI6MTY3NDM4MzAwMH0.jfM1XQQ4DpA0NFVZq-6Q1eJSyYKQzVqhZZn6XsEF68A"
+                }
+            }, {
+                EventID: item._id,
+                UserID: e.UserID,
+                Response: tof
+            })
+            .then(
+                console.log()
+            )
     }
 
+
     return (
-        <div>
-            {event.map(function (item, i) {
-                { request(item) }
-                <div className="EventCard">
-                    <h2>{item.eventname}</h2>
+        <div className="Eventrequests">
+            {event.map((item, i) => {
+                // { request(item) }
+                return (<div className="EventCard">
+                    <h2>{item.EventName}</h2>
                     <div className="EventDescription">
-                        {item.description}
+                        {item.desc}
                     </div>
-                    {requests.map(function (item1, i) {
-                        <div className="">
-                            <div className="username">{item1.username}</div>
-                            <button className='accept'>Accept</button>
-                            <button className='reject'>Reject</button>
-                        </div>
-                    })}
-                </div>
+                    <div className="users">
+                        {item.UserRequested.map((item1, i) => {
+                            return (<div className="user">
+                                {item1.UserID}
+                                <button onClick={(item1) => { response(item1, true, item) }}>ACCEPT</button>
+                                <button onClick={(item1) => { response(item1, false, item) }}>REJECT</button>
+                            </div>
+
+                            )
+                        })
+                        }
+                    </div>
+
+                </div>)
             })}
         </div>
     );
