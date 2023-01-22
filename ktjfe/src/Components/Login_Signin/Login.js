@@ -16,7 +16,7 @@ const Login = (props) => {
     }),
     onSubmit: (values) => {
       axios
-        .post("https://localhost:5000/api/auth/login", {
+        .post("http://localhost:5000/api/auth/login", {
           email: formik.values.email,
           password: formik.values.password,
         })
