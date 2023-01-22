@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
 function PostModal(props) {
+  const data = JSON.parse(localStorage.getItem("user"));
   const formik = useFormik({
     initialValues: {
       EventName: "",
@@ -24,7 +25,7 @@ function PostModal(props) {
         .post(
           "http://localhost:5000/api/event/PostEvent",
           {
-            CreatorID: "63cce87389f1e9f79fc976a5",
+            CreatorID: data._id,
             EventName: formik.values.EventName,
             desc: formik.values.desc,
             np: formik.values.np,
