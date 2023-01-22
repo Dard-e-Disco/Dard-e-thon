@@ -25,6 +25,7 @@ const Login = (props) => {
           localStorage.setItem("token", response.data.authToken);
           localStorage.setItem("user", JSON.stringify(response.data.user));
           localStorage.setItem("logstat", true);
+          props.setIsloggedin(true)
           console.log("Succesfully Logged in");
           props.setMsg("Successfully Signed In!")
 
@@ -37,7 +38,6 @@ const Login = (props) => {
   });
 
   return (
-
     props.show && (
       <div className="modal-parent">
         <div
@@ -88,11 +88,18 @@ const Login = (props) => {
             <button className="sgnbutton" id="sign-in-button-id" type="submit">
               Log In
             </button>
+            
           </form>
+          <button className="post-button" onClick={() => {
+              props.ShowSignup_Modal();
+              props.closeLogin_modal();
+              console.log("Signup-button-clicked");
+            }}>
+              Signup
+            </button>
         </div>
       </div>
     )
-
   );
 };
 
