@@ -85,7 +85,7 @@ const Login = (props) => {
                 onBlur={formik.handleBlur}
               />
             </div>
-            <button className="sgnbutton" id="sign-in-button-id" type="submit">
+            <button className="post-button" type="submit">
               Log In
             </button>
           </form>
