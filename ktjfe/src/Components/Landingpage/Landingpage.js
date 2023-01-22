@@ -32,7 +32,7 @@ const Landingpage = (props) => {
           </button>
 
           <button
-            className="login-button"
+            className="post-button"
             onClick={() => {if(props.isloggedin){
               logout()
             }else{
