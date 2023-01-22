@@ -37,10 +37,7 @@ const Landingpage = (props) => {
             show={props.Open_Modal}
             close_modal={props.closeModal}
           ></PostModal>
-          <Login
-            show={props.OpenLogin_Modal}
-            closeLogin_modal={props.closeLoginModal}
-          ></Login>
+          
         </section>
         <div className="hero-image">
           <figure>
