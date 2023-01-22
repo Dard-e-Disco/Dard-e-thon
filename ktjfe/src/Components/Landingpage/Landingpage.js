@@ -16,9 +16,9 @@ const Landingpage = (props) => {
     <div className="landing-page-parent">
       <main className="container">
         <section className="hero container">
-          <h1 className="hero-title-primary">Meet Samantha</h1>
+          <h1 className="hero-title-primary">Search Teams</h1>
           <p className="hero-title-sub">
-            A Fully Cloud Based AI Operating System That Understands You
+            Place to search for the team members to participate in various events
           </p>
 
           <button
@@ -51,7 +51,8 @@ const Landingpage = (props) => {
           <Login
             show={props.OpenLogin_Modal}
             closeLogin_modal={props.closeLoginModal}
-            ShowSignup_Modal={props.ShowSignup_Modal}
+            setMsg={props.setMsg}
+            showToastMessage={props.showToastMessage}
           ></Login>
           <Signup
             show={props.OpenSignup_Modal}
