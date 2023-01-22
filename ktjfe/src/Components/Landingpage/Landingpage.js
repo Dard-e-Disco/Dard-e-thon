@@ -1,17 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Login from "../Login_Signin/Login";
 import Signup from "../Login_Signin/Signin";
 import "./Landingpage.css";
 import PostModal from "./PostModal/PostModal";
 
 const Landingpage = (props) => {
+  const navigate = useNavigate()
+    const logout= ()=>{
+        localStorage.clear()
+        localStorage.setItem("logstat",false)
+        navigate("/")
+    }
   return (
     <div className="landing-page-parent">
       <main className="container">
         <section className="hero container">
-          <h1 className="hero-title-primary">Meet Samantha</h1>
+          <h1 className="hero-title-primary">Search Teams</h1>
           <p className="hero-title-sub">
-            A Fully Cloud Based AI Operating System That Understands You
+            Place to search for the team members to participate in various events
           </p>
 
           <button
@@ -26,9 +33,12 @@ const Landingpage = (props) => {
 
           <button
             className="login-button"
-            onClick={() => {
+            onClick={() => {if(props.isloggedin){
+              logout()
+            }else{
               props.ShowLogin_Modal();
-              console.log("login-button-clicked");
+            console.log("login-button-clicked");
+            }
             }}
           >
             Login
