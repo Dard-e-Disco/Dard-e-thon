@@ -15,4 +15,5 @@
 .users .user button{
     background-color: rgb(122, 202, 248);
     float: right;
+    margin: 5px;
 }

@@ -40,6 +40,8 @@ const Landingpage = (props) => {
           <Login
             show={props.OpenLogin_Modal}
             closeLogin_modal={props.closeLoginModal}
+            setMsg={props.setMsg}
+            showToastMessage={props.showToastMessage}
           ></Login>
         </section>
         <div className="hero-image">
