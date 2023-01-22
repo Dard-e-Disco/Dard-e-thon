@@ -1,25 +1,11 @@
-import React, { useState } from "react";
-import Event from "./Components/Events/Event";
-import "./App.css";
+import React from 'react'
 
-import Modal2 from "./Components/Login/components/Modal.js";
-
-function App() {
-  //login-signup
-  const [loginSignup, setLoginSignup] = useState(false);
-  const toggleLoginModal = () => {
-    setLoginSignup(!loginSignup);
-  };
-
+const App = () => {
   return (
-    <div className="App">
-      {loginSignup && <Modal2 setOpenModal={toggleLoginModal} />}
-      <button className="button-landingpage" onClick={toggleLoginModal}>
-        Login/Register
-      </button>
-      <Event />
+    <div>
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
