@@ -9,7 +9,6 @@
     transition: 0.5;
 }
 .EventCard:hover{
-    
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .users .user button{
@@ -18,5 +17,11 @@
     margin: 5px;
 }
 .Eventrequests{
-    padding-top: 80px;
+    padding-top: 95px;
 }
+@media screen and (max-width: 768px) {
+    .Eventrequests{
+        padding-top: 170px;
+    }
+  }
+  
