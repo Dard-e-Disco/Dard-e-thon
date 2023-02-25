@@ -17,8 +17,8 @@ const Navbar = (props) => {
           <span class="ml-3 text-xl">DARD</span>
         </Link>
         <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-          {props.isloggedin && <Link to={"/requests"} class="mr-5 hover:text-gray-900">Dashboard</Link>}
-          {props.isloggedin && <Link to={"/postedEvents"} class="mr-5 hover:text-gray-900">PostedEvents</Link>}
+          {JSON.parse(localStorage.getItem('logstat')) == true && <Link to={"/requests"} class="mr-5 hover:text-gray-900">Dashboard</Link>}
+          {JSON.parse(localStorage.getItem('logstat')) == true && <Link to={"/postedEvents"} class="mr-5 hover:text-gray-900">PostedEvents</Link>}
 
 
         </nav>
