@@ -7,11 +7,11 @@ import PostModal from "./PostModal/PostModal";
 
 const Landingpage = (props) => {
   const navigate = useNavigate()
-    const logout= ()=>{
-        localStorage.clear()
-        localStorage.setItem("logstat",false)
-        window.location.reload();
-    }
+  const logout = () => {
+    localStorage.clear()
+    localStorage.setItem("logstat", false)
+    window.location.reload();
+  }
   return (
     <div className="landing-page-parent">
       <main className="container">
@@ -33,23 +33,24 @@ const Landingpage = (props) => {
 
           <button
             className="post-button"
-            onClick={() => {if(props.isloggedin){
-              logout()
-            }else{
-              props.ShowLogin_Modal();
-            console.log("login-button-clicked");
-            }
+            onClick={() => {
+              if (JSON.parse(localStorage.getItem('logstat')) == true) {
+                logout()
+              } else {
+                props.ShowLogin_Modal();
+                console.log("login-button-clicked");
+              }
             }}
           >
-            {props.isloggedin?"Logout":"Login"}
+            {JSON.parse(localStorage.getItem('logstat')) == true ? "Logout" : "Login"}
           </button>
 
           <PostModal
             show={props.Open_Modal}
             close_modal={props.closeModal}
           ></PostModal>
-          
-        </section>  
+
+        </section>
         <div className="hero-image">
           <figure>
             <svg
