@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import "./Login.css";
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import {ImCross} from 'react-icons/im'
 const Login = (props) => {
+  const [privacy, setPrivacy] = useState("password");
+  const togglePrivacy = () => {
+    if (privacy == "password") {
+      setPrivacy("text");
+    }
+    else {
+      setPrivacy("password");
+    }
+  }
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -59,7 +70,7 @@ const Login = (props) => {
               props.closeLogin_modal();
             }}
           >
-            X
+            <ImCross/>
           </div>
           <form onSubmit={formik.handleSubmit}>
             <div className="inputfield">
@@ -81,12 +92,14 @@ const Login = (props) => {
               <label>PASSWORD</label>
               <input
                 name="password"
-                type="password"
+                type={privacy}
                 required
                 value={formik.values.password}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               />
+              {privacy == "password" ? <span className="privacy-eye"><AiOutlineEyeInvisible onClick={togglePrivacy} /></span> : <span className="privacy-eye"><AiOutlineEye onClick={togglePrivacy} /></span>}
+
             </div>
             <br />
             <button className="login" type="submit">
