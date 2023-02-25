@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./Components/Login_Signin/Login";
 import Navbar from "./Components/Navbar/Navbar";
 import Signup from "./Components/Login_Signin/Signin";
-
+import Modal from "./Components/Modal/Modal"
 const App = () => {
   const [msg, setMsg] = useState("Success!");
   const [Open_Modal, setOpen_Modal] = useState(false);

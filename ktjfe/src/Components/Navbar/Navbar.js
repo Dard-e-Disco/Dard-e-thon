@@ -1,6 +1,7 @@
 import { prop } from 'dom7';
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import "./Navbar.css"
 const Navbar = (props) => {
   const navigate = useNavigate()
   const logout = () => {
@@ -10,13 +11,12 @@ const Navbar = (props) => {
     window.location.reload();
   }
   return (
-    <header class="text-gray-600 body-font ">
-      <div class="mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center w-full bg-white ">
+    <header class="text-gray-600 body-font Navbar-Parent">
+      <div class="mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center w-full ">
         <Link to={"/"} class="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
           <img src="https://i.pinimg.com/originals/0a/1f/82/0a1f820e29719c7b67e9d5aa44241155.png" className='w-16 h-16 text-white p-2 rounded-full' alt="" />
-          <span class="ml-3 text-xl">DARD</span>
         </Link>
-        <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+        <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-white-400	flex flex-wrap items-center text-base justify-center text-white">
           {JSON.parse(localStorage.getItem('logstat')) == true && <Link to={"/requests"} class="mr-5 hover:text-gray-900">Dashboard</Link>}
           {JSON.parse(localStorage.getItem('logstat')) == true && <Link to={"/postedEvents"} class="mr-5 hover:text-gray-900">PostedEvents</Link>}
 
