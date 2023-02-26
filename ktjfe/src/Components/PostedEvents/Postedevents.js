@@ -39,11 +39,25 @@ const Postedevents = () => {
     <>
       <section className="Posted-Events-Parent">
         <h1>Events</h1>
-      {events.map((element)=>{
+      {events.map((element,index)=>{
         return <div className="event">
-          <h2>{element.EventName}</h2>
-          <p>{element.desc}</p>
-          <button className="primary-btn primary-btn_ripple">Request</button>
+          <div class="parent">
+            <div class="card">
+                <div class="content-box">
+                    <h2 class="card-title">{element.EventName}</h2>
+                    <p class="card-content">
+                        {element.desc}
+                    </p>
+                    <span class="see-more" onClick={()=>{
+                      JoinRequest(element.EventID)
+                    }}>Request</span>
+                </div>
+                <div class="date-box">
+                    <span class="date">{index}</span>
+                </div>
+            </div>
+        </div>
+
         </div>
       })}
       </section>
