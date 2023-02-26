@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import "./Login.css";
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import {ImCross} from 'react-icons/im'
+import {ImCross} from 'react-icons/im';
 const Login = (props) => {
   const [privacy, setPrivacy] = useState("password");
   const togglePrivacy = () => {

@@ -3,6 +3,7 @@ import "./PostModal.css";
 import { useFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
+import { ImCross } from 'react-icons/im';
 function PostModal(props) {
   const data = JSON.parse(localStorage.getItem("user"));
   const formik = useFormik({
@@ -55,7 +56,7 @@ function PostModal(props) {
   return (
     props.show && (
       <div className="modal-parent">
-        
+
         <div
           className="post-form"
           onClick={(event) => {
@@ -68,13 +69,13 @@ function PostModal(props) {
           }}
         >
           <div
-          className="closing-cross"
-          onClick={() => {
-            props.close_modal();
-          }}
-        >
-          X
-        </div>
+            className="closing-cross"
+            onClick={() => {
+              props.close_modal();
+            }}
+          >
+            <ImCross />
+          </div>
           <form onSubmit={formik.handleSubmit} className="profile">
             <div className="inputfield">
               <label for="EventName" class="">
@@ -91,10 +92,10 @@ function PostModal(props) {
                 onBlur={formik.handleBlur}
               />
             </div>
-            {formik.touched.EventName && formik.errors.EventName ? (
+            {formik.touched.EventName && formik.errors.EventName ? (<><br />
               <p class="mt-2 text-sm text-right text-red-600 dark:text-red-500">
                 <span class="font-medium">{formik.errors.EventName}</span>
-              </p>
+              </p></>
             ) : (
               <br />
             )}
@@ -114,10 +115,10 @@ function PostModal(props) {
                 onBlur={formik.handleBlur}
               />
             </div>
-            {formik.touched.desc && formik.errors.desc ? (
+            {formik.touched.desc && formik.errors.desc ? (<><br />
               <p class="mt-2 text-sm text-right text-red-600 dark:text-red-500">
                 <span class="font-medium">{formik.errors.desc}</span>
-              </p>
+              </p></>
             ) : (
               <br />
             )}
@@ -137,10 +138,10 @@ function PostModal(props) {
                 onBlur={formik.handleBlur}
               />
             </div>
-            {formik.touched.np && formik.errors.np ? (
+            {formik.touched.np && formik.errors.np ? (<><br />
               <p class="mt-2 text-sm text-right text-red-600 dark:text-red-500">
                 <span class="font-medium">{formik.errors.np}</span>
-              </p>
+              </p></>
             ) : (
               <br />
             )}
