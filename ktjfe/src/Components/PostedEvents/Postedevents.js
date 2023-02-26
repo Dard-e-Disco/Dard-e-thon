@@ -9,7 +9,7 @@ const Postedevents = () => {
       .get("http://localhost:5000/api/event/getAllEvents")
       .then((response) => {
         setEvents(response.data.filter(function(element){
-          
+          return element.np>0
         }));
       });
   }, []);
