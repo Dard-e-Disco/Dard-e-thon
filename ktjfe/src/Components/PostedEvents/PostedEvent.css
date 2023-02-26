@@ -1,204 +1,72 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lexend+Deca:wght@200;300;400;500;600;700;800&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --Inter: "Inter", sans-serif;
-    --Lexend: "Lexend Deca", sans-serif;
-
-    --purple-light: #8257e6;
-    --white: #fefbfb;
-    --white200: #c4c4c4;
-    --gray200: #282830;
-    --dark: #13131f;
-}
-
-/* ALL IMGS BUTTON */
-.img-btn {
-    width: 8rem;
-    min-height: 2.5rem;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    border: none;
-    text-align: center;
-    border-radius: 0.3rem;
-    color: var(--white);
-    font-family: var(--Lexend);
-    font-size: 1.4rem;
-    background: var(--purple-light);
-}
-
-/* IMAGE HOVER EFFECT */
-.scroll-img {
-    transition: all 0.3s ease;
-    /* filter: brightness(0.6); */
-}
-
-
-/* SCROLL IMAGES CONTAINER */
-.scroll-imgs-container {
-    margin-top: 5rem;
-    max-height: 60rem;
-    overflow-y: scroll;
+.Posted-Events-Parent {
+    padding-top: 95px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.6rem 0;
-    flex: 0 1 700px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* PAIN IMG */
-.scroll-img {
+.Posted-Events-Parent h1 {
+    font-size: 50px;
+    text-decoration: underline;
+    color: white;
+}
+
+.event {
+    border: 1px solid white;
+    padding: 1em;
+    margin: 0.75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+}
+
+.event h2 {
+    font-size: 25px;
+}
+
+.primary-btn{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.639);
+    border: 0;
+    aspect-ratio: 2/1;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 0.3em;
+    padding:0.5em 1em 0.5em 1em;
+    border-radius: 20px;
+}
+
+.primary-btn_ripple {
+    transition: 0.4s;
     position: relative;
     overflow: hidden;
-    width: 100%;
-    max-width: 8rem;
-    min-height: 8rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 20px;
-    margin: 0.25em;
 }
 
-/* DEADPOOL IMG */
-.scroll-img-item:nth-child(2) .scroll-img {
-    background: url("https://i.imgur.com/3L128HY.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.primary-btn_ripple::before {
+    transition: all 0.8s;
+    background-color: white;
+    content: "";
+    opacity: 0;
+    position: absolute;
+    margin-left: -100px !important;
+    margin-top: -120%;
+    padding-top: 300%;
+    padding-left: 350%;
 }
 
-/* MINECRAFT IMG */
-.scroll-img-item:nth-child(3) .scroll-img {
-    background: url("https://i.imgur.com/yLKf4nz.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.primary-btn_ripple:active::before {
+    transition: 0s;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
 }
 
-/* HARRY P. IMG */
-.scroll-img-item:nth-child(4) .scroll-img {
-    background: url("https://i.imgur.com/If644nP.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* SUPERNATURAL IMG */
-.scroll-img-item:nth-child(5) .scroll-img {
-    background: url("https://i.imgur.com/XLEp4MO.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.scroll-img-item:nth-child(7) .scroll-img {
-    background: url("https://i.imgur.com/If644nP.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.scroll-img-item {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    background: rgba(255, 8, 8, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.scroll-img-item:nth-child(5) .img-btn {
-    top: 1.6rem;
-}
-
-.scroll-img-texts {
-    display: flex;
-    width: 600px;
-    height: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-    align-items: flex-start;
-}
-
-.scroll-img-title {
-    color: var(--dark);
-    font-family: var(--Lexend);
-    font-size: 1rem;
-    line-height: 2rem;
-}
-
-.scroll-img-text {
-    font-family: var(--Inter);
-    color: var(--white200);
-    font-size: 1.1rem;
-    line-height: 1.6rem;
-}
-
-.scroll-img-date {
-    font-family: var(--Inter);
-    font-weight: 600;
-    color: var(--white200);
-    line-height: 2rem;
-}
-
-.scroll-btn {
-    background: var(--purple-light);
-    border: none;
-    border-radius: 0.3rem;
-    width: 10rem;
-    min-height: 2.5rem;
-    transition: all 0.2s;
-    cursor: pointer;
-}
-
-.scroll-btn:hover {
-    transform: scale(0.9);
-}
-
-.scroll-btn a {
-    font-family: var(--Inter);
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--white);
-}
-
-/* MEDIAS */
-@media (max-width: 500px) {
-    .scroll-imgs-container {
-        padding-right: 0.5rem;
-        row-gap: 3rem;
+@media screen and (max-width: 768px) {
+    .Posted-Events-Parent {
+        padding-top: 170px;
     }
-
-    .scroll-img-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .scroll-img {
-        max-width:300px;
-    }
-
-    .scroll-img-item:nth-child(5) .img-btn {
-        top: 1rem;
-    }
-}
-
-.Article {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
 }
