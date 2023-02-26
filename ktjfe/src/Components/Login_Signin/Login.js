@@ -3,8 +3,9 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import "./Login.css";
+import Modal from '../Modal/Modal';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import {ImCross} from 'react-icons/im';
+import { ImCross } from 'react-icons/im';
 const Login = (props) => {
   const [privacy, setPrivacy] = useState("password");
   const togglePrivacy = () => {
@@ -51,74 +52,74 @@ const Login = (props) => {
   });
 
   return (
-    props.show && (
-      <div className="modal-parent">
+
+    <Modal show={props.show}>
+      <div
+        className="login-form"
+        onClick={(event) => {
+          //   const isOutside =
+          //     event.target.closest(".modal-parent") &
+          //     !event.target.closest(".post-form");
+          //   if (isOutside) {
+          //     props.close_modal();
+          //   }
+        }}
+      >
         <div
-          className="login-form"
-          onClick={(event) => {
-            //   const isOutside =
-            //     event.target.closest(".modal-parent") &
-            //     !event.target.closest(".post-form");
-            //   if (isOutside) {
-            //     props.close_modal();
-            //   }
+          className="closing-cross"
+          onClick={() => {
+            props.closeLogin_modal();
           }}
         >
-          <div
-            className="closing-cross"
-            onClick={() => {
-              props.closeLogin_modal();
-            }}
-          >
-            <ImCross/>
-          </div>
-          <form onSubmit={formik.handleSubmit}>
-            <div className="inputfield">
-              <span>{/* <FaIcons.FaUserTie /> */}</span>
-              <label>EMAIL</label>
-              <input
-                name="email"
-                type="email"
-                required
-                autoComplete="off"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-            <br /><br />
-            <div className="inputfield" id="signin-password">
-              <span>{/* <RiIcons.RiLockPasswordFill /> */}</span>
-              <label>PASSWORD</label>
-              <input
-                name="password"
-                type={privacy}
-                required
-                value={formik.values.password}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-              {privacy == "password" ? <span className="privacy-eye"><AiOutlineEyeInvisible onClick={togglePrivacy} /></span> : <span className="privacy-eye"><AiOutlineEye onClick={togglePrivacy} /></span>}
-
-            </div>
-            <br />
-            <button className="login" type="submit">
-              Log In
-            </button>
-          </form>
-          <button
-            className="signup"
-            onClick={() => {
-              props.ShowSignup_Modal();
-              props.closeLogin_modal();
-              console.log("Signup-button-clicked");
-            }}
-          >
-            Signup
-          </button>
+          <ImCross />
         </div>
+        <form onSubmit={formik.handleSubmit}>
+          <div className="inputfield">
+            <span>{/* <FaIcons.FaUserTie /> */}</span>
+            <label>EMAIL</label>
+            <input
+              name="email"
+              type="email"
+              required
+              autoComplete="off"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+          <br /><br />
+          <div className="inputfield" id="signin-password">
+            <span>{/* <RiIcons.RiLockPasswordFill /> */}</span>
+            <label>PASSWORD</label>
+            <input
+              name="password"
+              type={privacy}
+              required
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {privacy == "password" ? <span className="privacy-eye"><AiOutlineEyeInvisible onClick={togglePrivacy} /></span> : <span className="privacy-eye"><AiOutlineEye onClick={togglePrivacy} /></span>}
+
+          </div>
+          <br />
+          <button className="login" type="submit">
+            Log In
+          </button>
+        </form>
+        <button
+          className="signup"
+          onClick={() => {
+            props.ShowSignup_Modal();
+            props.closeLogin_modal();
+            console.log("Signup-button-clicked");
+          }}
+        >
+          Signup
+        </button>
       </div>
-    )
+    </Modal>
+
   );
 };
 
