@@ -53,7 +53,7 @@ const Login = (props) => {
 
   return (
 
-    <Modal show={props.show}>
+    <Modal show={props.show} closeLogin_modal={props.closeLogin_modal}>
       <div
         className="login-form"
         onClick={(event) => {

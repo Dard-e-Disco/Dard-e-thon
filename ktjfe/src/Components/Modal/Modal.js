@@ -1,18 +1,16 @@
 import React from "react";
 import "./Modal.css";
 function Modal(props) {
-  const CloseModal = () => {
-    document.querySelector(".Modal-Parent").classList.remove("active");
-  }
+  
   return (
     props.show && (
       <div>
         <section className="Modal-Parent active">
           <span className="overlay" onClick={() => {
-            CloseModal();
+            props.closeLogin_modal();
           }}></span>
           <div className="modal-box">
-            <i className="fa-regular fa-circle-check"></i>
+            {/* <i className="fa-regular fa-circle-check"></i> */}
             <p>{props.children}</p>
           </div>
         </section>
