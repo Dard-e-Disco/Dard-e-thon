@@ -5,9 +5,9 @@ function Modal(props) {
         document.querySelector(".Modal-Parent").classList.remove("active");
     }
   return (
-    true && (
+    props.show && (
     <div>
-      <section className="Modal-Parent active">
+      <section className="Modal-Parent">
         <span className="overlay" onClick={()=>{
             CloseModal();
         }}></span>

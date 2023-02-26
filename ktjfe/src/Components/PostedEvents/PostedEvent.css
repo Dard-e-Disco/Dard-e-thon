@@ -19,9 +19,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     color: white;
+    width: 90%;
+    gap: 0.5em;
 }
 
 .event h2 {

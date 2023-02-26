@@ -41,8 +41,8 @@ const Postedevents = () => {
         <h1>Events</h1>
       {events.map((element)=>{
         return <div className="event">
-          <h2>Lorem, ipsum dolor.</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae laudantium adipisci sed placeat perspiciatis fugit iure atque dolore ratione similique.</p>
+          <h2>{element.EventName}</h2>
+          <p>{element.desc}</p>
           <button className="primary-btn primary-btn_ripple">Request</button>
         </div>
       })}
