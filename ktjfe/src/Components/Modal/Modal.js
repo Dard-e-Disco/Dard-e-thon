@@ -2,7 +2,7 @@ import React from "react";
 import "./Modal.css";
 function Modal(props) {
     const CloseModal=()=>{
-        // document.querySelector(".Modal-Parent").classList.remove("active");
+        document.querySelector(".Modal-Parent").classList.remove("active");
     }
   return (
     true && (
