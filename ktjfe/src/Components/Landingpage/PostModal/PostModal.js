@@ -16,7 +16,7 @@ function PostModal(props) {
       EventName: Yup.string().required("Required"),
       desc: Yup.string().required("Required"),
       np: Yup.number()
-        .min(2, "Enter A valid npcipant number")
+        .min(1, "Enter A valid npcipant number")
         .typeError("That doesn't look like a npcipant number")
         .integer("A npcipant number can't include a decimal point")
         .required("Required"),
