@@ -35,17 +35,15 @@
   font-family: "Nunito", sans-serif;
 }
 .parent {
-  height: 400px;
+  /* height: 400px; */
   width: 300px;
   padding: 20px;
   perspective: 1000px;
 }
 
 .card {
-  padding-top: 100px;
+  padding-top: 90px;
   transform-style: preserve-3d;
-  background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-position: center center;
   width: 100%;
   transition: all 0.5s ease-in-out;
   border-radius: 10px;
@@ -56,7 +54,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.811);
   border-radius: 0px 0px 10px 10px;
-  box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+  box-shadow: rgba(189, 161, 3, 0.925) 0px 20px 50px -25px;
   transition: all 0.5s ease-in-out;
   padding: 50px 25px 25px 25px;
   transform-style: preserve-3d;
@@ -80,7 +78,7 @@
   font-weight: 900;
   font-size: 11px;
   text-transform: uppercase;
-  color: #0088ff;
+  color: #ffdd00;
   padding-top: 15px;
   transition: all 0.5s ease-in-out;
   transform: translate3d(0px, 0px, 20px);
@@ -94,7 +92,7 @@
   background-color: black;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: #0066ff 0px 20px 60px 0px, #00c8ff 0px 18px 36px -18px;
+  box-shadow: #ffff00b5 0px 20px 60px 0px, #00c8ff 0px 18px 36px -18px;
   transform: translate3d(0px, 0px, 50px);
 }
 .date-box span {
@@ -109,7 +107,7 @@
 .date-box .date {
   font-size: 20px;
   font-weight: 900;
-  color: #0088ff;
+  color: #ffdd00;
 }
 .see-more{
     cursor: pointer;

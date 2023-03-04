@@ -9,6 +9,7 @@ body {
 background-image: url('daria-doroshenkova-pCJP8sjuqa8-unsplash.jpg');
 background-size: 100vw 100vh;
 background-repeat: no-repeat;
+background-attachment: fixed;
 
 }
 
