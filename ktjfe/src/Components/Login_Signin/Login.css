@@ -1,6 +1,6 @@
 .login-form {
     width: 40vw;
-    min-height: 40vh;
+    /* min-height: 40vh; */
     background-color:transparent;
     padding: 3%;
     position: relative;
@@ -16,20 +16,18 @@
 }
 .login{
     background-color: white;
-    width: 6vw;
-    height: 5vh;
+    width: 14vmin;
+    height: 8vmin;
+    font-size: larger;
     border-radius: 5%;
-    position: absolute;
     margin-top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
     color: black;
 }
 .privacy-eye{
     position: absolute;
     margin: 4px 2px 0px 0px;
     right: 3vw;
-    color: rgb(122, 122, 207);
+    color: rgb(0, 0, 0);
 }
 
 .signup{
@@ -37,9 +35,10 @@
     width: 15vmin;
     height: 4vmin;
     border-radius: 5%;
-    position: absolute;
+    color: black;
+    /* position: absolute;
     margin-top: 15%;
     left: 50%;
     transform: translateX(-50%);
-    color: black;
+    color: black; */
 }
