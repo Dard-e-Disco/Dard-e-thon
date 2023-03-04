@@ -3,9 +3,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import "./Login.css";
-import Modal from '../Modal/Modal';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { ImCross } from 'react-icons/im';
+import Signup from "./Signin";
 const Login = (props) => {
   const [privacy, setPrivacy] = useState("password");
   const togglePrivacy = () => {
@@ -53,26 +52,9 @@ const Login = (props) => {
 
   return (
 
-    <Modal show={props.show} closeLogin_modal={props.closeLogin_modal}>
       <div
         className="login-form"
-        onClick={(event) => {
-          //   const isOutside =
-          //     event.target.closest(".modal-parent") &
-          //     !event.target.closest(".post-form");
-          //   if (isOutside) {
-          //     props.close_modal();
-          //   }
-        }}
       >
-        <div
-          className="closing-cross"
-          onClick={() => {
-            props.closeLogin_modal();
-          }}
-        >
-          <ImCross />
-        </div>
         <form onSubmit={formik.handleSubmit}>
           <div className="inputfield">
             <span>{/* <FaIcons.FaUserTie /> */}</span>
@@ -110,16 +92,14 @@ const Login = (props) => {
         <button
           className="signup"
           onClick={() => {
-            props.ShowSignup_Modal();
-            props.closeLogin_modal();
+            props.close_modal();
+            props.showSignup();
             console.log("Signup-button-clicked");
           }}
         >
           Signup
         </button>
       </div>
-    </Modal>
-
   );
 };
 

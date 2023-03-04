@@ -1,28 +1,19 @@
-
-
 .login-form {
     width: 40vw;
     min-height: 40vh;
-    background-color: rgb(122, 122, 207);
+    background-color:transparent;
     padding: 3%;
     position: relative;
     border-radius: 5%;
-    box-shadow: 2px 3px 25px -2px rgba(0,0,0,0.75);
 }
 
 .inputfield label{
     float: left;
-    color: white;
-    
 }
-
-
 .inputfield input{
     float: right;
     min-width: 50%;
 }
-
-
 .login{
     background-color: white;
     width: 6vw;
@@ -32,6 +23,7 @@
     margin-top: 5%;
     left: 50%;
     transform: translateX(-50%);
+    color: black;
 }
 .privacy-eye{
     position: absolute;
@@ -49,14 +41,5 @@
     margin-top: 15%;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.login-form .closing-cross{
-    color: rgb(255, 255, 255);
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+    color: black;
 }

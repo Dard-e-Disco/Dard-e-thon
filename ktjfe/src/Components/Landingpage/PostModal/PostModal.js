@@ -3,7 +3,6 @@ import "./PostModal.css";
 import { useFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
-import { ImCross } from 'react-icons/im';
 function PostModal(props) {
   const data = JSON.parse(localStorage.getItem("user"));
   const formik = useFormik({
@@ -54,105 +53,91 @@ function PostModal(props) {
     },
   });
   return (
-    props.show && (
-      <div className="modal-parent">
-
-        <div
-          className="post-form"
-          onClick={(event) => {
-            //   const isOutside =
-            //     event.target.closest(".modal-parent") &
-            //     !event.target.closest(".post-form");
-            //   if (isOutside) {
-            //     props.close_modal();
-            //   }
-          }}
-        >
-          <div
-            className="closing-cross"
-            onClick={() => {
-              props.close_modal();
-            }}
-          >
-            <ImCross />
-          </div>
-          <form onSubmit={formik.handleSubmit} className="profile">
-            <div className="inputfield">
-              <label for="EventName" class="">
-                EVENT NAME
-              </label>
-              <input
-                type="text"
-                id="EventName"
-                class=""
-                required
-                autoComplete="off"
-                value={formik.values.EventName}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-            {formik.touched.EventName && formik.errors.EventName ? (<><br />
-              <p class="mt-2 text-sm text-right text-red-600 dark:text-red-500">
-                <span class="font-medium">{formik.errors.EventName}</span>
-              </p></>
-            ) : (
-              <br />
-            )}
-
-            <div className="inputfield">
-              <label for="desc" class="">
-                EVENT DISCRIPTION
-              </label>
-              <input
-                type="text"
-                id="desc"
-                class=""
-                required
-                autoComplete="off"
-                value={formik.values.desc}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-            {formik.touched.desc && formik.errors.desc ? (<><br />
-              <p class="mt-2 text-sm text-right text-red-600 dark:text-red-500">
-                <span class="font-medium">{formik.errors.desc}</span>
-              </p></>
-            ) : (
-              <br />
-            )}
-
-            <div className="inputfield">
-              <label for="np" class="">
-                NUMBER OF PARTICIPANT
-              </label>
-              <input
-                type="text"
-                id="np"
-                class=""
-                required
-                autoComplete="off"
-                value={formik.values.np}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-            {formik.touched.np && formik.errors.np ? (<><br />
-              <p class="mt-2 text-sm text-right text-red-600 dark:text-red-500">
-                <span class="font-medium">{formik.errors.np}</span>
-              </p></>
-            ) : (
-              <br />
-            )}
-
-            <button type="submit" className="post-button">
-              Post
-            </button>
-          </form>
+    <div className="post-form">
+      <form onSubmit={formik.handleSubmit} className="profile">
+        <div className="inputfield">
+          <label for="EventName" class="">
+            EVENT NAME
+          </label>
+          <input
+            type="text"
+            id="EventName"
+            class=""
+            required
+            autoComplete="off"
+            value={formik.values.EventName}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
         </div>
-      </div>
-    )
+        {formik.touched.EventName && formik.errors.EventName ? (
+          <>
+            <br />
+            <p class="mt-2 text-sm text-right text-red-600 dark:text-red-500">
+              <span class="font-medium">{formik.errors.EventName}</span>
+            </p>
+          </>
+        ) : (
+          <br />
+        )}
+
+        <div className="inputfield">
+          <label for="desc" class="">
+            EVENT DISCRIPTION
+          </label>
+          <input
+            type="text"
+            id="desc"
+            class=""
+            required
+            autoComplete="off"
+            value={formik.values.desc}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+        </div>
+        {formik.touched.desc && formik.errors.desc ? (
+          <>
+            <br />
+            <p class="mt-2 text-sm text-right text-red-600 dark:text-red-500">
+              <span class="font-medium">{formik.errors.desc}</span>
+            </p>
+          </>
+        ) : (
+          <br />
+        )}
+
+        <div className="inputfield">
+          <label for="np" class="">
+            NUMBER OF PARTICIPANT
+          </label>
+          <input
+            type="text"
+            id="np"
+            class=""
+            required
+            autoComplete="off"
+            value={formik.values.np}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+        </div>
+        {formik.touched.np && formik.errors.np ? (
+          <>
+            <br />
+            <p class="mt-2 text-sm text-right text-red-600 dark:text-red-500">
+              <span class="font-medium">{formik.errors.np}</span>
+            </p>
+          </>
+        ) : (
+          <br />
+        )}
+
+        <button type="submit" className="post-button">
+          Post
+        </button>
+      </form>
+    </div>
   );
 }
 

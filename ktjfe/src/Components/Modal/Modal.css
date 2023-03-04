@@ -1,102 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.Modal-Parent {
-  font-family: 'Poppins', sans-serif;
-}
-.Modal-Parent {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100vw;
+.modal-parent {
+  position: fixed;
   height: 100vh;
-  overflow: hidden;
-}
-
-.Modal-Parent {
-  font-size: 18px;
-  font-weight: 400;
-  color: #fff;
-  /* background-color: #4070f4; */
-  border-radius: 6px;
-  border: none;
-  padding: 14px 22px;
-  cursor: pointer;
-}
-.close-btn:hover {
-  /* background-color: #265df2; */
-}
-.close-btn.show-modal,
-.modal-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-.Modal-Parent.active .show-modal {
-  display: none;
-}
-.overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-}
-.Modal-Parent.active .overlay,
-.Modal-Parent.active .modal-box {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.Modal-Parent.active .modal-box {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-box {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-  /* max-width: 380px; */
-  /* background-color: #fff; */
-  border-radius: 24px;
-  padding: 30px 20px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 1000000;
+  gap: 0.25em;
+  flex-direction: column;
+  flex: 1;
+  inset: 0;
+}
+.modal-content::-webkit-scrollbar{
+  display: none;
+}
+.modal-content {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000001;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.692);
+
+}
+.closing-cross {
+  position: absolute;
+  top: 15%;
+  right: 3%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cinzel Decorative', cursive;
 }
 
-.modal-box i {
-  font-size: 70px;
-  color: #4070f4;
-}
-.modal-box h3 {
-  font-size: 25px;
-  font-weight: 600;
-  margin-top: 20px;
-  color: #333;
-}
-.modal-box p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #333;
+.modal-external-content {
+  padding: 2em;
+  padding-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  align-items: center;
   text-align: center;
-}
-.modal-box .buttons {
-  margin-top: 25px;
-}
-.modal-box button {
-  font-size: 14px;
-  font-weight: 400;
-  padding: 6px 12px;
-  margin: 0 10px;
+
 }
