@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
-background: #ee3e01;
+background-image: url('claudio-schwarz-k39RGHmLoV8-unsplash.jpg');
+
 }
 
 code {
