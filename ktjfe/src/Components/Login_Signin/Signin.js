@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import Modal from "../Modal/Modal";
 const Signup = (props) => {
   const formik = useFormik({
     initialValues: {
