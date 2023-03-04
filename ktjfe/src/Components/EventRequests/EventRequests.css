@@ -27,11 +27,15 @@
 .users{
     display: flex;
     flex-direction: row;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .users .user {
     background-color: rgba(0, 0, 0, 0.4);
     height: 30vmin;
-    width: 40vmin;
+    width: 40vmin !important;
     margin-top: 5px;
     color: white;
     font-size: 0.9rem;
@@ -44,7 +48,7 @@
     margin: 5px;
 }
 .users .user .req {
-    margin: 5px;
+    
     font-size: 0.9rem;
 }
 .users .user button{
