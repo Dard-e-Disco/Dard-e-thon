@@ -55,11 +55,10 @@ const Eventrequests = (props) => {
         return (
           <div className="EventCard">
             <h2 className="EventName">{item.EventName}</h2>
-            <div className="EventDescription">{item.desc}</div>
             <div className="users">
               <div className="user">
                 <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias! Saepe fugiat quod nam dignissimos omnis fuga minima! Vitae, eligendi impedit.</div>
+                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias! Saepe</div>
                 <button
                   onClick={() => {
                     // response(item1, false, item);
@@ -77,7 +76,7 @@ const Eventrequests = (props) => {
               </div>
               <div className="user">
                 <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias! Saepe fugiat quod nam dignissimos omnis fuga minima! Vitae, eligendi impedit.</div>
+                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias!</div>
                 <button
                   onClick={() => {
                     // response(item1, false, item);
@@ -95,7 +94,7 @@ const Eventrequests = (props) => {
               </div>
               <div className="user">
                 <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias! Saepe fugiat quod nam dignissimos omnis fuga minima! Vitae, eligendi impedit.</div>
+                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias!.</div>
                 <button
                   onClick={() => {
                     // response(item1, false, item);
@@ -113,7 +112,7 @@ const Eventrequests = (props) => {
               </div>
               <div className="user">
                 <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias! Saepe fugiat quod nam dignissimos omnis fuga minima! Vitae, eligendi impedit.</div>
+                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias!</div>
                 <button
                   onClick={() => {
                     // response(item1, false, item);
@@ -131,7 +130,7 @@ const Eventrequests = (props) => {
               </div>
               <div className="user">
                 <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias! Saepe fugiat quod nam dignissimos omnis fuga minima! Vitae, eligendi impedit.</div>
+                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias!</div>
                 <button
                   onClick={() => {
                     // response(item1, false, item);

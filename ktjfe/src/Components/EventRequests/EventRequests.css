@@ -1,4 +1,4 @@
-.EventCard{
+.EventCard {
     min-width: 80vw;
     /* height: 25vmin; */
     /* background: linear-gradient(rgb(177, 253, 62),yellow); */
@@ -6,72 +6,100 @@
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.432);
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .EventCard .EventName {
-    background-color: rgba(0, 0, 0, 0.3);
     color: white;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
     font-size: 1.2rem;
 }
+
 .EventCard .EventDescription {
-    background-color: rgba(0, 0, 0, 0.3);
     color: white;
     border-radius: 5px;
     padding: 3px;
     margin-top: 2px;
     font-size: 1.05rem;
 }
-.users{
+
+.users {
     display: flex;
     flex-direction: row;
     gap: 1.5em;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
+
 }
+
+.user {
+    background: rgba(255, 249, 249, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 .users .user {
+    text-align: center;
+    padding: 1em;
     background-color: rgba(0, 0, 0, 0.4);
-    height: 30vmin;
-    width: 40vmin !important;
+    width: 40vmin;
     margin-top: 5px;
     color: white;
     font-size: 0.9rem;
     border-radius: 5px;
 }
-.users .user .name{
+
+.users .user .name {
     display: flex;
     justify-content: center;
     font-size: 1rem;
     margin: 5px;
 }
+
 .users .user .req {
-    
     font-size: 0.9rem;
 }
-.users .user button{
-    background-color: rgba(0, 0, 0, 0);
-    float: right;
-    padding-right: 10px ;
-    
+
+.users .user button {
+    background-color: black;
+    margin: 0.2em;
+    padding: 0.4em;
 }
-.Eventrequests{
+
+.Eventrequests {
     padding-top: 95px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.Eventrequests h1{
+
+.Eventrequests h1 {
     font-size: 50px;
     text-decoration: underline;
     color: white;
 }
+
 @media screen and (max-width: 768px) {
-    .Eventrequests{
+    .Eventrequests {
         padding-top: 170px;
     }
-  }
-  
+}
+
+@media screen and (max-width: 655px) {
+    .users .user {
+        width: auto;
+    }
+}
