@@ -1,20 +1,57 @@
 .EventCard{
     min-width: 80vw;
     /* height: 25vmin; */
-    background: linear-gradient(rgb(177, 253, 62),yellow);
+    /* background: linear-gradient(rgb(177, 253, 62),yellow); */
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.5;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.432);
 }
-.EventCard:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.EventCard .EventName {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.EventCard .EventDescription {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin-top: 2px;
+    font-size: 1.05rem;
+}
+.users{
+    display: flex;
+    flex-direction: row;
+}
+.users .user {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 30vmin;
+    width: 40vmin;
+    margin-top: 5px;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+.users .user .name{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    margin: 5px;
+}
+.users .user .req {
+    margin: 5px;
+    font-size: 0.9rem;
 }
 .users .user button{
-    background-color: rgb(122, 202, 248);
+    background-color: rgba(0, 0, 0, 0);
     float: right;
-    margin: 5px;
+    padding-right: 10px ;
+    
 }
 .Eventrequests{
     padding-top: 95px;
