@@ -25,7 +25,7 @@ const Navbar = (props) => {
           if (JSON.parse(localStorage.getItem('logstat')) == true) {
             logout()
           } else {
-            props.ShowLogin_Modal();
+            props.loginMF();
             console.log("login-button-clicked");
           }
         }}>{JSON.parse(localStorage.getItem('logstat')) == true ? "Logout" : "Login"}

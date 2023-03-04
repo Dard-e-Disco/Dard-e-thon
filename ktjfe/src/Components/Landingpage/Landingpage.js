@@ -6,36 +6,30 @@ import "./Landingpage.css";
 import PostModal from "./PostModal/PostModal";
 
 const Landingpage = (props) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const logout = () => {
-    localStorage.clear()
-    localStorage.setItem("logstat", false)
+    localStorage.clear();
+    localStorage.setItem("logstat", false);
     window.location.reload();
-  }
+  };
   return (
     <div className="landing-page-parent">
       <main className="container">
         <section className="hero container">
           <h1 className="hero-title-primary">Search Teams</h1>
           <p className="hero-title-sub">
-            Place to search for the team members to participate in various events
+            Place to search for the team members to participate in various
+            events
           </p>
 
           <button
             className="post-button"
             onClick={() => {
-              props.Show_Modal();
+              props.PostMF();
             }}
           >
             Post
           </button>
-
-
-          <PostModal
-            show={props.Open_Modal}
-            close_modal={props.closeModal}
-          ></PostModal>
-
         </section>
       </main>
     </div>
