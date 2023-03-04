@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import Modal from "../Modal/Modal";
 const Signup = (props) => {
   const formik = useFormik({
     initialValues: {
@@ -36,7 +37,7 @@ const Signup = (props) => {
   });
 
   return (
-    props.show && (
+    <Modal show={props.show}>
       <div className="modal-parent">
         <div
           className="login-form"
@@ -102,15 +103,16 @@ const Signup = (props) => {
             </button>
           </form>
           <button className="post-button" onClick={() => {
-              props.closeSignup_modal();
-              props.ShowLogin_Modal();
-              console.log("Login-button-clicked");
-            }}>
-             Login
-            </button>
+            props.closeSignup_modal();
+            props.ShowLogin_Modal();
+            console.log("Login-button-clicked");
+          }}>
+            Login
+          </button>
         </div>
       </div>
-    )
+    </Modal>
+
   );
 };
 
