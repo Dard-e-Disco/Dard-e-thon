@@ -129,6 +129,24 @@ const Eventrequests = (props) => {
                   ACCEPT
                 </button>
               </div>
+              <div className="user">
+                <span className="name">Naam</span>
+                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias! Saepe fugiat quod nam dignissimos omnis fuga minima! Vitae, eligendi impedit.</div>
+                <button
+                  onClick={() => {
+                    // response(item1, false, item);
+                  }}
+                >
+                  REJECT
+                </button>
+                <button
+                  onClick={() => {
+                    // response(item1, true, item);
+                  }}
+                >
+                  ACCEPT
+                </button>
+              </div>
               {/* {item.UserRequested.map((item1, i) => {
                 return (
                   <div className="user">
