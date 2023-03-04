@@ -1,14 +1,7 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./Navbar.css"
 const Navbar = (props) => {
-  const navigate = useNavigate()
-  const logout = () => {
-    localStorage.clear()
-    localStorage.setItem("logstat", false)
-    navigate("/")
-    window.location.reload();
-  }
   return (
     <header class="text-gray-600 body-font Navbar-Parent">
       <div class="mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center w-full ">
@@ -23,7 +16,7 @@ const Navbar = (props) => {
         </nav>
         <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" onClick={() => {
           if (JSON.parse(localStorage.getItem('logstat')) == true) {
-            logout()
+            props.logoutMF();
           } else {
             props.loginMF();
             console.log("login-button-clicked");
