@@ -8,6 +8,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import Signup from "./Components/Login_Signin/Signin";
 import Modal from "./Components/Modal/Modal";
 import PostEventsModal from "./Components/Landingpage/PostModal/PostModal";
+import Logout from "./Components/Logout/Logout";
+import { Link, useNavigate } from "react-router-dom";
 const App = () => {
   //modal states
   const [loginModal, setloginModal] = useState(false);
@@ -35,6 +37,14 @@ const App = () => {
   };
   //modalcontrols functions ended here
   const [isloggedin, setIsloggedin] = useState(false);
+  const navigate = useNavigate();
+  const logout = () => {
+    localStorage.clear();
+    localStorage.setItem("logstat", false);
+    close_modal();
+    navigate("/");
+    window.location.reload();
+  };
   return (
     <div>
       <Navbar
@@ -62,13 +72,24 @@ const App = () => {
         <Route exact path="/requests" element={<Eventrequests />} />
       </Routes>
       <Modal show={loginModal} close_modal={close_modal}>
-        <Login showSignup={showSignup} close_modal={close_modal} showLogin={showLogin}/>
+        <Login
+          showSignup={showSignup}
+          close_modal={close_modal}
+          showLogin={showLogin}
+        />
       </Modal>
       <Modal show={SignupModal} close_modal={close_modal}>
-        <Signup showSignup={showSignup} close_modal={close_modal} showLogin={showLogin}/>
+        <Signup
+          showSignup={showSignup}
+          close_modal={close_modal}
+          showLogin={showLogin}
+        />
       </Modal>
       <Modal show={PostModal} close_modal={close_modal}>
-        <PostEventsModal/>
+        <PostEventsModal />
+      </Modal>
+      <Modal show={logoutModal} close_modal={close_modal}>
+        <Logout logoutFunc={logout} close_modal={close_modal} />
       </Modal>
     </div>
   );
