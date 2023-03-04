@@ -9,8 +9,8 @@ const Navbar = (props) => {
           <img src="https://i.pinimg.com/originals/0a/1f/82/0a1f820e29719c7b67e9d5aa44241155.png" className='w-16 h-16 text-white p-2 rounded-full' alt="" />
         </Link>
         <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-white-400	flex flex-wrap items-center text-base justify-center text-white">
-          {JSON.parse(localStorage.getItem('logstat')) == true && <Link to={"/requests"} class="mr-5 hover:text-gray-900">Dashboard</Link>}
-          {JSON.parse(localStorage.getItem('logstat')) == true && <Link to={"/postedEvents"} class="mr-5 hover:text-gray-900">PostedEvents</Link>}
+          {JSON.parse(localStorage.getItem('logstat')) == true && <Link to={"/requests"} class="mr-5">Dashboard</Link>}
+          {JSON.parse(localStorage.getItem('logstat')) == true && <Link to={"/postedEvents"} class="mr-5">PostedEvents</Link>}
 
 
         </nav>
