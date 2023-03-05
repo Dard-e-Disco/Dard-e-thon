@@ -16,17 +16,22 @@ const Landingpage = (props) => {
     <div className="landing-page-parent">
       <main className="container">
         <section className="hero container">
-          <h1 className="hero-title-primary">Search Teams</h1>
+          <h1 className="hero-title-primary">
+            Connect, Collaborate, Conquer - Build your dream team and conquer
+            any event.
+          </h1>
           <p className="hero-title-sub">
-            Place to search for the team members to participate in various
-            events
+            The website allows users to create and join teams for various
+            events. Users can request to join existing teams or create their
+            own. It provides a platform for users to connect and collaborate
+            with like-minded individuals.
           </p>
 
           <button
             className="post-button-main"
             onClick={() => {
               props.PostMF();
-              document.querySelector(".post-button-main").style.opacity="0";
+              document.querySelector(".post-button-main").style.opacity = "0";
             }}
           >
             Post

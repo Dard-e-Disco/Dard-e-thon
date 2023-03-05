@@ -22,7 +22,7 @@ const App = () => {
     setPostModal(false);
     setSignupModal(false);
     setlogoutModal(false);
-    document.querySelector(".post-button-main").style.opacity="1";
+    document.querySelector(".post-button-main").style.opacity = "1";
   };
   const showLogin = () => {
     setloginModal(true);
@@ -40,11 +40,10 @@ const App = () => {
   const [isloggedin, setIsloggedin] = useState(false);
   const navigate = useNavigate();
   const logout = () => {
+    navigate("/");
     localStorage.clear();
     localStorage.setItem("logstat", false);
     close_modal();
-    navigate("/");
-    window.location.reload();
   };
   return (
     <div>

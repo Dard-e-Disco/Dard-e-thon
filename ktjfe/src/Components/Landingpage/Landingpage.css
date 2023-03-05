@@ -11,6 +11,7 @@
 .container {
   max-width: 100vw;
   margin: 0 auto;
+  margin-top: -7em;
   /* height: 100vh; */
 }
 
@@ -137,20 +138,28 @@ main {
 .hero {
   text-align: center;
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hero-title-primary {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 10vmin;
+  /* font-size: 10vmin; */
+  font-size: 2rem;
   line-height: 58px;
+  width: 80%;
 }
 
 .hero-title-sub {
   margin: 0.2em 0 1em 0;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: 4.6vmin;
+  /* font-size: 4.6vmin; */
+  font-size: 1.5rem;
+  width: 60%;
 }
 
 .post-button {
