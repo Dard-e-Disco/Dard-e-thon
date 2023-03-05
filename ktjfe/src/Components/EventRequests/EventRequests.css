@@ -2,16 +2,10 @@
     min-width: 80vw;
     /* height: 25vmin; */
     /* background: linear-gradient(rgb(177, 253, 62),yellow); */
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(101, 240, 255, 0.2);
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
-    background: rgba(0, 0, 0, 0.35);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .EventCard .EventName {
@@ -41,19 +35,10 @@
 
 }
 
-.user {
-    background: rgba(255, 249, 249, 0.35);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
 .users .user {
     text-align: center;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(to right bottom, #0a5454, #407785, #779bb2, #b2bfdb, #ece5ff);
     width: 40vmin;
     margin-top: 5px;
     color: white;
@@ -71,13 +56,13 @@
 .users .user .req {
     font-size: 0.9rem;
 }
-
-.users .user button {
-    background-color: black;
-    margin: 0.2em;
-    padding: 0.4em;
+.response-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
 }
-
 .Eventrequests {
     padding-top: 95px;
     display: flex;
@@ -91,6 +76,68 @@
     text-decoration: underline;
     color: white;
 }
+
+.user button {
+    width: 130px;
+    height: 40px;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+    width: 80px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: white;
+    /* background: linear-gradient(0deg, rgba(255, 27, 0, 1) 0%, rgba(251, 75, 2, 1) 100%); */
+}
+
+.user button:hover {
+    color: brown;
+    background: transparent;
+    box-shadow: none;
+}
+
+.user button:before,
+.user button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: black;
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.user button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.user button:hover:before,
+.user button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
 
 @media screen and (max-width: 768px) {
     .Eventrequests {

@@ -2,7 +2,7 @@
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +11,7 @@
   flex-direction: column;
   flex: 1;
   inset: 0;
+  backdrop-filter: blur(1px);
 }
 .modal-content::-webkit-scrollbar{
   display: none;
@@ -21,7 +22,13 @@
   flex-direction: column;
   z-index: 1000001;
   overflow-y: scroll;
-  background-color: rgba(0, 0, 0, 0.692);
+  /* background-color: rgba(10, 168, 31, 0.692); */
+  background: rgba( 255, 255, 255, 0.45 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 }
 .closing-cross {

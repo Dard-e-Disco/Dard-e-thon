@@ -22,6 +22,7 @@ const App = () => {
     setPostModal(false);
     setSignupModal(false);
     setlogoutModal(false);
+    document.querySelector(".post-button-main").style.opacity="1";
   };
   const showLogin = () => {
     setloginModal(true);

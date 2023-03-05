@@ -58,93 +58,100 @@ const Eventrequests = (props) => {
             <div className="users">
               <div className="user">
                 <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias! Saepe</div>
-                <button
-                  onClick={() => {
-                    // response(item1, false, item);
-                  }}
-                >
-                  REJECT
-                </button>
-                <button
-                  onClick={() => {
-                    // response(item1, true, item);
-                  }}
-                >
-                  ACCEPT
-                </button>
+                <div className="req">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nobis quos unde alias nostrum doloribus repudiandae natus
+                  facilis numquam molestias!
+                </div>
+                <div className="response-buttons">
+                  <button
+                    onClick={() => {
+                      // response(item1, false, item);
+                    }}
+                  >
+                    <span>Reject</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      // response(item1, true, item);
+                    }}
+                  >
+                    <span>Accept</span>
+                  </button>
+                </div>
               </div>
               <div className="user">
                 <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias!</div>
-                <button
-                  onClick={() => {
-                    // response(item1, false, item);
-                  }}
-                >
-                  REJECT
-                </button>
-                <button
-                  onClick={() => {
-                    // response(item1, true, item);
-                  }}
-                >
-                  ACCEPT
-                </button>
+                <div className="req">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nobis quos unde alias nostrum doloribus repudiandae natus
+                  facilis numquam molestias!
+                </div>
+
+                <div className="response-buttons">
+                  <button
+                    onClick={() => {
+                      // response(item1, false, item);
+                    }}
+                  >
+                    <span>Reject</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      // response(item1, true, item);
+                    }}
+                  >
+                    <span>Accept</span>
+                  </button>
+                </div>
               </div>
               <div className="user">
                 <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias!.</div>
-                <button
-                  onClick={() => {
-                    // response(item1, false, item);
-                  }}
-                >
-                  REJECT
-                </button>
-                <button
-                  onClick={() => {
-                    // response(item1, true, item);
-                  }}
-                >
-                  ACCEPT
-                </button>
+                <div className="req">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nobis quos unde alias nostrum doloribus repudiandae natus
+                  facilis numquam molestias!
+                </div>
+                <div className="response-buttons">
+                  <button
+                    onClick={() => {
+                      // response(item1, false, item);
+                    }}
+                  >
+                    <span>Reject</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      // response(item1, true, item);
+                    }}
+                  >
+                    <span>Accept</span>
+                  </button>
+                </div>
               </div>
               <div className="user">
                 <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias!</div>
-                <button
-                  onClick={() => {
-                    // response(item1, false, item);
-                  }}
-                >
-                  REJECT
-                </button>
-                <button
-                  onClick={() => {
-                    // response(item1, true, item);
-                  }}
-                >
-                  ACCEPT
-                </button>
-              </div>
-              <div className="user">
-                <span className="name">Naam</span>
-                <div className="req">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos unde alias nostrum doloribus repudiandae natus facilis numquam molestias!</div>
-                <button
-                  onClick={() => {
-                    // response(item1, false, item);
-                  }}
-                >
-                  REJECT
-                </button>
-                <button
-                  onClick={() => {
-                    // response(item1, true, item);
-                  }}
-                >
-                  ACCEPT
-                </button>
+                <div className="req">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nobis quos unde alias nostrum doloribus repudiandae natus
+                  facilis numquam molestias!
+                </div>
+                <div className="response-buttons">
+                  <button
+                    onClick={() => {
+                      // response(item1, false, item);
+                    }}
+                  >
+                    <span>Reject</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      // response(item1, true, item);
+                    }}
+                  >
+                    <span>Accept</span>
+                  </button>
+                </div>
               </div>
               {/* {item.UserRequested.map((item1, i) => {
                 return (

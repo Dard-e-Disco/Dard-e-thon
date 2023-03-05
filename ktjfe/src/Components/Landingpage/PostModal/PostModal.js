@@ -3,8 +3,20 @@ import "./PostModal.css";
 import { useFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
+import { useEffect,useState } from "react";
 function PostModal(props) {
   const data = JSON.parse(localStorage.getItem("user"));
+  const [ph1, setPh1] = useState("");
+  const [ph2, setPh2] = useState("");
+  const [ph3, setPh3] = useState("");
+  useEffect(() => {
+
+    if (window.innerWidth < 800) {
+      setPh1("Event Name");
+      setPh2("Event Description");
+      setPh3("Number of Participants");
+    }
+  }, []);
   const formik = useFormik({
     initialValues: {
       EventName: "",
@@ -64,6 +76,7 @@ function PostModal(props) {
             id="EventName"
             class=""
             required
+            placeholder={ph1}
             autoComplete="off"
             value={formik.values.EventName}
             onChange={formik.handleChange}
@@ -90,6 +103,7 @@ function PostModal(props) {
             id="desc"
             class=""
             required
+            placeholder={ph2}
             autoComplete="off"
             value={formik.values.desc}
             onChange={formik.handleChange}
@@ -116,6 +130,7 @@ function PostModal(props) {
             id="np"
             class=""
             required
+            placeholder={ph3}
             autoComplete="off"
             value={formik.values.np}
             onChange={formik.handleChange}
@@ -133,8 +148,8 @@ function PostModal(props) {
           <br />
         )}
 
-        <button type="submit" className="post-button">
-          Post
+        <button type="submit" className="post-button btn-3">
+          <span>Post</span>
         </button>
       </form>
     </div>

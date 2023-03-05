@@ -23,9 +23,10 @@ const Landingpage = (props) => {
           </p>
 
           <button
-            className="post-button"
+            className="post-button-main"
             onClick={() => {
               props.PostMF();
+              document.querySelector(".post-button-main").style.opacity="0";
             }}
           >
             Post

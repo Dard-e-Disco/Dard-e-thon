@@ -3,7 +3,19 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Modal from "../Modal/Modal";
+import { useEffect,useState } from "react";
 const Signup = (props) => {
+  const [ph1, setPh1] = useState("");
+  const [ph2, setPh2] = useState("");
+  const [ph3, setPh3] = useState("");
+  useEffect(() => {
+
+    if (window.innerWidth < 800) {
+      setPh1("EMAIL");
+      setPh2("PASSWORD");
+      setPh3("Name");
+    }
+  }, []);
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -28,6 +40,7 @@ const Signup = (props) => {
           localStorage.setItem("token", response.data.authToken);
           localStorage.setItem("user", JSON.stringify(response.data.user));
           localStorage.setItem("logstat", true);
+          props.close_modal();
         })
         .catch(function (error) {
           console.log(error.message);
@@ -38,58 +51,61 @@ const Signup = (props) => {
   return (
     <div className="login-form">
       <form onSubmit={formik.handleSubmit}>
-        <div className="inputfield">
-          <span>{/* <FaIcons.FaUserTie /> */}</span>
+        <div className="inputfield signin-field">
           <label>Name</label>
           <input
             type="text"
             id="name"
             className=""
             required
+            placeholder={ph3}
             autoComplete="off"
             value={formik.values.name}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            style={{margin:"7px 0px 7px 0px"}}
           />
         </div>
-        <div className="inputfield">
-          <span>{/* <FaIcons.FaUserTie /> */}</span>
+        <div className="inputfield signin-field">
           <label>EMAIL</label>
           <input
             name="email"
             type="email"
             required
+            placeholder={ph1}
             autoComplete="off"
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            style={{margin:"7px 0px 7px 0px"}}
           />
         </div>
-        <div className="inputfield" id="signin-password">
-          <span>{/* <RiIcons.RiLockPasswordFill /> */}</span>
+        <div className="inputfield signin-field" id="signin-password">
           <label>PASSWORD</label>
           <input
             name="password"
             type="password"
+            placeholder={ph2}
             required
             value={formik.values.password}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            style={{margin:"7px 0px 7px 0px"}}
           />
         </div>
-        <button className="post-button" type="submit">
+        <button className="login-modal-button " type="submit" style={{margin:"17px 0px 17px 0px"}}>
           Sign In
         </button>
       </form>
-      <button
-        className="post-button"
+      <span>Already have an account? </span>
+      <span
         onClick={() => {
           props.close_modal();
           props.showLogin();
         }}
       >
-        Login
-      </button>
+        <span style={{cursor:"pointer"}}>Login</span>
+      </span>
     </div>
   );
 };

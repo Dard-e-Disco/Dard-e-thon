@@ -45,12 +45,8 @@ const Login = (props) => {
           localStorage.setItem("token", response.data.authToken);
           localStorage.setItem("user", JSON.stringify(response.data.user));
           localStorage.setItem("logstat", true);
-          props.setIsloggedin(true);
           console.log("Succesfully Logged in");
-          props.setMsg("Successfully Signed In!");
-
-          props.showToastMessage();
-          props.closeLogin_modal();
+          props.close_modal();
 
         })
         .catch(function (error) {
@@ -95,7 +91,7 @@ const Login = (props) => {
 
         </div>
         <br />
-        <button className="login" type="submit">
+        <button className="login-modal-button" type="submit">
           Log In
         </button>
       </form>
